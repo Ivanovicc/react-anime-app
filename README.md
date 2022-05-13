@@ -1,4 +1,4 @@
-# Sakura || Anime Page 🌸
+# Sakura | Anime Page 🌸
 
 ## Descripcion
 
