@@ -1,0 +1,39 @@
+.form-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: var(--bg-secondary);
+  margin: auto;
+  padding: 6px 12px 6px 12px;
+  border-radius: 100px;
+}
+
+.form-input {
+  display: flex;
+  font-family: inherit;
+  align-self: center;
+  color: var(--text-primary);
+  justify-content: center;
+  background: transparent;
+  border-color: transparent;
+}
+
+.form-input:focus-visible {
+  outline: none;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--btn-primary);
+  width: 26px;
+  height: 26px;
+  border-radius: 50px;
+}
+
+.search-button svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--text-primary);
+}
