@@ -2,7 +2,7 @@
   flex: 0 0 auto;
   max-width: 100%;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-bottom: 10px;
   padding-top: 10px;
 }
@@ -10,12 +10,12 @@
 .section-title {
   font-size: 16px;
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: -15px;
   font-weight: 400;
 }
 
 .list-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  grid-gap: 1.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  grid-gap: 1.25rem;
 }

@@ -4,7 +4,7 @@ export const usePageTitle = (title, previousTitle = false) => {
   const titleDefault = useRef(document.title);
 
   useEffect(() => {
-    document.title = title;
+    document.title = `サクラ | ${title}`;
   }, [title]);
 
   useEffect(
@@ -13,6 +13,6 @@ export const usePageTitle = (title, previousTitle = false) => {
         document.title = titleDefault.current;
       }
     },
-    []
+    [previousTitle]
   );
 };

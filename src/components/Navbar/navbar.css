@@ -1,9 +1,12 @@
 .nav-section {
-  display: flex;
   background-color: var(--bg-primary);
+}
+
+.nav {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 
 .nav-title a {
@@ -23,6 +26,7 @@
 }
 
 .navbar-box a {
+  margin-right: 20px;
   color: var(--text-primary);
   font-size: 17px;
   font-weight: 500;

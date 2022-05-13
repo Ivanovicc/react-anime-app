@@ -14,7 +14,7 @@ const apiResponseAnimes = (apiResponse) => {
   return [];
 };
 
-export const getResults = ({ key, limit = 16, page = 0 } = {}) => {
+export const getResults = ({ key, limit = 15, page = 0 } = {}) => {
   let apiURL = `https://kitsu.io/api/edge/anime?filter[text]=${key}&page[limit]=${limit}&page[offset]=${
     limit * page
   }`;
