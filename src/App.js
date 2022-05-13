@@ -1,4 +1,6 @@
 import { Switch, Route } from "wouter";
+/* Styles */
+import "./App.css";
 /* Components */
 import { NavBar } from "components/Navbar/navbar";
 /* Pages */

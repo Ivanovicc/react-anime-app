@@ -15,7 +15,7 @@ const apiResponseAnimes = (apiResponse) => {
 };
 
 export const getAnimeByCategory = ({ id }) => {
-  const apiURL = `https://kitsu.io/api/edge/anime?filter[categories]=${id}&page[limit]=18&page[offset]=0&sort=-user_count`;
+  const apiURL = `https://kitsu.io/api/edge/anime?filter[categories]=${id}&page[limit]=15&page[offset]=0&sort=-user_count`;
 
   return fetch(apiURL)
     .then((res) => {

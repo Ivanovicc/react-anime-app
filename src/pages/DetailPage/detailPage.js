@@ -15,7 +15,7 @@ export const DetailPage = ({ params }) => {
   );
 
   return (
-    <main className="main-details container">
+    <main className="main-details">
       <div className="row">
         <div className="cover-wrapper">
           <div>

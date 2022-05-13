@@ -11,9 +11,9 @@
 .load-button {
   color: var(--text-primary);
   background: var(--btn-primary);
-  padding: 4px 8px;
+  padding: 8px 12px;
   margin-top: 10px;
   font-weight: 600;
   font-size: 14px;
-  width: 200px;
+  width: 100px;
 }

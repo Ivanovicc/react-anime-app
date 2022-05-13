@@ -6,10 +6,10 @@ import "./navbar.css";
 export const NavBar = () => {
   return (
     <nav className="nav-section">
-      <div className="container">
+      <div className="nav container">
         <div className="nav-title">
           <Link to="/">
-            <a>モ・ン・ド・ンゴ</a>
+            <a>サクラ</a>
           </Link>
         </div>
         <div className="navbar-box">
@@ -18,8 +18,8 @@ export const NavBar = () => {
               <h3>Mangas</h3>
             </a>
           </Link>
+          <SearchBar />
         </div>
-        <SearchBar />
       </div>
     </nav>
   );

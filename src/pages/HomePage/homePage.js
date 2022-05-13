@@ -10,16 +10,16 @@ export const HomePage = () => {
 
   return (
     <main className="main-home row">
-      <div className="main-body">
+      <div className="main-body container">
         <ListPreview
           animes={inEmision}
           title="Animes más populares en emision"
         />
       </div>
-      <div className="main-body">
+      <div className="main-body container">
         <ListPreview animes={popular} title="Animes más populares" />
       </div>
-      <div className="main-body">
+      <div className="main-body container">
         <ListPreview animes={rating} title="Animes mejor evaluados" />
       </div>
     </main>
