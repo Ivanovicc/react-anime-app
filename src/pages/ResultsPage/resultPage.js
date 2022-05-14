@@ -1,6 +1,6 @@
 import { AnimeList } from "components/Lists/animesList";
-/* import { LoadingView } from "components/loading"; */
 import { ButtonPage } from "components/Button/buttonPage";
+/* Hooks */
 import { useSearchForm } from "hooks/useSearch";
 import { usePageTitle } from "hooks/usePageTitle";
 

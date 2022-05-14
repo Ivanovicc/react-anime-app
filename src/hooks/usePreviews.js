@@ -2,21 +2,34 @@ import { useEffect, useState } from "react";
 import { emisionPreview, popularPreview, ratingPreview } from "api/getPreviews";
 
 export const usePreviews = () => {
+  const [loading, setLoading] = useState(false);
   const [inEmision, setInEmision] = useState([]);
   const [popular, setPopular] = useState([]);
   const [rating, setRating] = useState([]);
 
   useEffect(() => {
-    emisionPreview().then(setInEmision);
+    setLoading(true);
+    emisionPreview().then((res) => {
+      setInEmision(res);
+      setLoading(false);
+    });
   }, []);
 
   useEffect(() => {
-    popularPreview().then(setPopular);
+    setLoading(true);
+    popularPreview().then((res) => {
+      setPopular(res);
+      setLoading(false);
+    });
   }, []);
 
   useEffect(() => {
-    ratingPreview().then(setRating);
+    setLoading(true);
+    ratingPreview().then((res) => {
+      setRating(res);
+      setLoading(false);
+    });
   }, []);
 
-  return { inEmision, popular, rating };
+  return { inEmision, popular, rating, loading };
 };
