@@ -1,3 +1,5 @@
+import { API_URL } from "api/settings";
+
 const apiResponseAnimes = (apiResponse) => {
   const { data = [] } = apiResponse;
   if (Array.isArray(data)) {
@@ -15,9 +17,9 @@ const apiResponseAnimes = (apiResponse) => {
 };
 
 export const getAnimeByCategory = ({ id }) => {
-  const apiURL = `https://kitsu.io/api/edge/anime?filter[categories]=${id}&page[limit]=15&page[offset]=0&sort=-user_count`;
-
-  return fetch(apiURL)
+  return fetch(
+    `${API_URL}/anime?filter[categories]=${id}&page[limit]=15&page[offset]=0&sort=-user_count`
+  )
     .then((res) => {
       return res.json();
     })

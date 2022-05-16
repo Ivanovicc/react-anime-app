@@ -8,7 +8,7 @@ import "./home.css";
 
 export const HomePage = () => {
   const { inEmision, popular, rating, loading } = usePreviews();
-  usePageTitle("Home");
+  usePageTitle("Inicio");
 
   return (
     <>

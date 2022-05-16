@@ -1,17 +1,21 @@
-export const getAnimeDetails = ({ slug }) => {
-  const baseURL = `https://kitsu.io/api/edge/anime?fields[categories]=slug%2Ctitle&filter[slug]=${slug}&include=categories`;
+import { API_URL } from "api/settings";
 
-  return fetch(baseURL)
+const apiResponseAnimeDetail = (apiResponse) => {
+  const { data = [], included = [] } = apiResponse;
+  const anime = data[0].attributes;
+  const categories = included.map(({ attributes, id }) => {
+    return attributes.slug;
+  });
+
+  return { anime, categories };
+};
+
+export const getAnimeDetails = ({ slug }) => {
+  return fetch(
+    `${API_URL}/anime?fields[categories]=slug%2Ctitle&filter[slug]=${slug}&include=categories`
+  )
     .then((res) => {
       return res.json();
     })
-    .then((result) => {
-      const { data, included } = result;
-      const anime = data[0].attributes;
-      const categories = included.map(({ attributes, id }) => {
-        return attributes.slug;
-      });
-
-      return { anime, categories };
-    });
+    .then(apiResponseAnimeDetail);
 };

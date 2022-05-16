@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  border: none;
+}
+
 :root {
   --bg-primary: #000000;
   --bg-secondary: #181818;
@@ -18,6 +22,10 @@
 
   --assets-primary: #2cccc3;
   --assets-secondary: #facd3d;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

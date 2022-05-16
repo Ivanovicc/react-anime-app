@@ -1,20 +1,34 @@
 import { AnimeList } from "components/Lists/animesList";
-import { ButtonPage } from "components/Button/buttonPage";
-/* Hooks */
+import { PaginationList } from "components/Pagination/paginationList";
 import { useSearchForm } from "hooks/useSearch";
 import { usePageTitle } from "hooks/usePageTitle";
+import { Loading } from "components/Loading/loadingPage";
 
 export const ResultsPage = ({ params }) => {
   const { key } = params;
-  const { result, setPages } = useSearchForm({ key });
+  const { result, setPageOffset, loading, pageCount, pageOffset } =
+    useSearchForm({
+      key,
+    });
   usePageTitle("Resultados de busqueda");
 
   return (
     <>
-      <main className="main-results-page container">
-        <AnimeList animes={result} title={`Resultados de "${key}"`} />
-        <ButtonPage nextPage={setPages} />
-      </main>
+      {loading ? (
+        <Loading />
+      ) : (
+        <main className="main-results-page container">
+          <AnimeList
+            animes={result.animes}
+            title={`Resultados de "${decodeURI(key)}"`}
+          />
+          <PaginationList
+            count={pageCount}
+            offset={pageOffset}
+            setPageOffset={setPageOffset}
+          />
+        </main>
+      )}
     </>
   );
 };
