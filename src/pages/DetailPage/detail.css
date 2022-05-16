@@ -20,10 +20,10 @@
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
-
+/* 
 .section-details {
   max-width: 1140px;
-}
+} */
 
 /* -------------------- SIDEBAR ----------------------- */
 .sidebar-section {
@@ -91,6 +91,8 @@
 
 .ranking-wrap .rating-rank.ranking svg {
   fill: var(--assets-secondary);
+  width: 16px;
+  height: 16px;
 }
 
 /* ----------------------SECTION CENTER------------------------- */

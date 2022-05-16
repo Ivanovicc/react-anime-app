@@ -1,3 +1,5 @@
+import { API_URL } from "api/settings";
+
 const apiResponseAnimes = (apiResponse) => {
   const { data = [] } = apiResponse;
   if (Array.isArray(data)) {
@@ -15,10 +17,7 @@ const apiResponseAnimes = (apiResponse) => {
 };
 
 export const popularPreview = () => {
-  const apiURL =
-    "https://kitsu.io/api/edge/anime?page[limit]=5&page[offset]=0&sort=-user_count";
-
-  return fetch(apiURL)
+  return fetch(`${API_URL}/anime?page[limit]=5&page[offset]=0&sort=-user_count`)
     .then((res) => {
       return res.json();
     })
@@ -26,10 +25,9 @@ export const popularPreview = () => {
 };
 
 export const ratingPreview = () => {
-  const apiURL =
-    "https://kitsu.io/api/edge/anime?page[limit]=5&page[offset]=0&sort=-average_rating";
-
-  return fetch(apiURL)
+  return fetch(
+    `${API_URL}/anime?page[limit]=5&page[offset]=0&sort=-average_rating`
+  )
     .then((res) => {
       return res.json();
     })
@@ -37,10 +35,9 @@ export const ratingPreview = () => {
 };
 
 export const emisionPreview = () => {
-  const apiURL =
-    "https://kitsu.io/api/edge/anime?filter[status]=current&page[limit]=5&page[offset]=0&sort=-user_count";
-
-  return fetch(apiURL)
+  return fetch(
+    `${API_URL}/anime?filter[status]=current&page[limit]=5&page[offset]=0&sort=-user_count`
+  )
     .then((res) => {
       return res.json();
     })
@@ -48,9 +45,9 @@ export const emisionPreview = () => {
 };
 
 export const categoryPopularPreview = ({ id }) => {
-  const apiURL = `https://kitsu.io/api/edge/anime?filter[categories]=${id}&page[limit]=15&page[offset]=0&sort=-user_count`;
-
-  return fetch(apiURL)
+  return fetch(
+    `${API_URL}/anime?filter[categories]=${id}&page[limit]=10&page[offset]=0&sort=-user_count`
+  )
     .then((res) => {
       return res.json();
     })
@@ -58,9 +55,9 @@ export const categoryPopularPreview = ({ id }) => {
 };
 
 export const categoryEmisionPreviews = ({ id }) => {
-  const apiURL = `https://kitsu.io/api/edge/anime?filter[categories]=${id}&page[limit]=15&page[offset]=0&sort=-start_date`;
-
-  return fetch(apiURL)
+  return fetch(
+    `${API_URL}/anime?filter[categories]=${id}&page[limit]=10&page[offset]=0&sort=-start_date`
+  )
     .then((res) => {
       return res.json();
     })

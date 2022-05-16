@@ -5,16 +5,25 @@ import {
 } from "api/getPreviews";
 
 export const useCategory = ({ id }) => {
+  const [loading, setLoading] = useState(false);
   const [categoryPopular, setCategoryPopular] = useState([]);
   const [categoryEmision, setCategoryEmision] = useState([]);
 
   useEffect(() => {
-    categoryPopularPreview({ id }).then(setCategoryPopular);
+    setLoading(true);
+    categoryPopularPreview({ id }).then((res) => {
+      setCategoryPopular(res);
+      setLoading(false);
+    });
   }, [id]);
 
   useEffect(() => {
-    categoryEmisionPreviews({ id }).then(setCategoryEmision);
+    setLoading(true);
+    categoryEmisionPreviews({ id }).then((res) => {
+      setCategoryEmision(res);
+      setLoading(false);
+    });
   }, [id]);
 
-  return { categoryPopular, categoryEmision };
+  return { categoryPopular, categoryEmision, loading };
 };
