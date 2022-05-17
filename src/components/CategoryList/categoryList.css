@@ -1,0 +1,17 @@
+.category-wrapper {
+  display: block;
+  padding: 15px;
+}
+
+.category-list ul {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 42px;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.category-list ul li {
+  min-width: 50%;
+}

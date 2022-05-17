@@ -18,7 +18,7 @@ const apiResponseAnimes = (apiResponse) => {
 
 export const getAnimeByCategory = ({ id }) => {
   return fetch(
-    `${API_URL}/anime?filter[categories]=${id}&page[limit]=15&page[offset]=0&sort=-user_count`
+    `${API_URL}/anime?filter[categories]=${id}&page[limit]=18&page[offset]=0&sort=-user_count`
   )
     .then((res) => {
       return res.json();

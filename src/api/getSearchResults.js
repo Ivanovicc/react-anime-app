@@ -17,7 +17,7 @@ const apiResponseAnimes = (apiResponse) => {
   return [];
 };
 
-export const getResults = ({ key, limit = 15, pageOffset = 0 } = {}) => {
+export const getResults = ({ key, limit = 18, pageOffset = 0 } = {}) => {
   return fetch(
     `${API_URL}/anime?filter[text]=${key}&page[limit]=${limit}&page[offset]=${
       limit * pageOffset
