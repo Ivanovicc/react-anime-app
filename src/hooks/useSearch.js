@@ -3,7 +3,7 @@ import { getResults } from "api/getSearchResults";
 
 export const useSearchForm = ({ key }) => {
   const [loading, setLoading] = useState(false);
-  /*   const [loadingPage, setLoadingPage] = useState(false); */
+  const [loadingPage, setLoadingPage] = useState(false);
   const [result, setResult] = useState([]);
   const [pageOffset, setPageOffset] = useState(0);
   const [pageCount, setPageCount] = useState(0);
@@ -17,15 +17,16 @@ export const useSearchForm = ({ key }) => {
   }, [key]);
 
   useEffect(() => {
-    /*    if (pageOffset === 0) return; */
+    setLoadingPage(true);
     getResults({ key, pageOffset }).then((result) => {
       const { meta } = result;
       const newCount = meta.count;
-      const totalCount = Math.ceil(newCount / 15);
+      const totalCount = Math.ceil(newCount / 18);
       setResult(result);
       setPageCount(totalCount);
+      setLoadingPage(false);
     });
   }, [key, pageOffset]);
 
-  return { result, loading, setPageOffset, pageCount, pageOffset };
+  return { result, loading, setPageOffset, pageCount, pageOffset, loadingPage };
 };

@@ -6,7 +6,7 @@ import { Loading } from "components/Loading/loadingPage";
 
 export const ResultsPage = ({ params }) => {
   const { key } = params;
-  const { result, setPageOffset, loading, pageCount, pageOffset } =
+  const { result, setPageOffset, loading, pageCount, pageOffset, loadingPage } =
     useSearchForm({
       key,
     });
@@ -22,11 +22,15 @@ export const ResultsPage = ({ params }) => {
             animes={result.animes}
             title={`Resultados de "${decodeURI(key)}"`}
           />
-          <PaginationList
-            count={pageCount}
-            offset={pageOffset}
-            setPageOffset={setPageOffset}
-          />
+          {loadingPage ? (
+            "Cargando..."
+          ) : (
+            <PaginationList
+              count={pageCount}
+              offset={pageOffset}
+              setPageOffset={setPageOffset}
+            />
+          )}
         </main>
       )}
     </>

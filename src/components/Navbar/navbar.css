@@ -1,5 +1,6 @@
 .nav-section {
   background-color: var(--bg-primary);
+  padding: 10px;
 }
 
 .nav {
@@ -9,14 +10,19 @@
   align-items: center;
 }
 
+.nav {
+  max-width: 1240px;
+}
+
+.navbar-box a,
 .nav-title a {
   font-size: 17px;
   font-weight: 700;
   transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 }
 
+.navbar-box a:hover,
 .nav-title a:hover {
-  padding-bottom: 5px;
   color: var(--btn-secondary) !important;
 }
 
@@ -27,12 +33,4 @@
 
 .navbar-box a {
   margin-right: 20px;
-  color: var(--text-primary);
-  font-size: 17px;
-  font-weight: 500;
-  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-}
-
-.navbar-box a:hover {
-  color: var(--btn-secondary) !important;
 }

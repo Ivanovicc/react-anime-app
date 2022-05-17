@@ -1,14 +1,14 @@
 import { AnimeCard } from "components/Card/animeCard";
 /* Styles */
-import "./list.css";
+import "./listPreview.css";
 
 export const ListPreview = ({ title, animes }) => {
   return (
-    <section className="list-section">
+    <section className="preview-section">
       <div className="section-title">
         <h3>{title}</h3>
       </div>
-      <div className="list-grid">
+      <div className="preview-grid">
         {animes.map(({ title, poster, id, type, slug }) => {
           return (
             <AnimeCard

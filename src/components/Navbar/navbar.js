@@ -14,9 +14,7 @@ export const NavBar = () => {
         </div>
         <div className="navbar-box">
           <Link to="/mangas">
-            <a>
-              <h3>Mangas</h3>
-            </a>
+            <a>Mangas</a>
           </Link>
           <SearchBar />
         </div>
