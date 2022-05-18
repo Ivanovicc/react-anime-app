@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getResults } from "api/getSearchResults";
+import { getResults } from "api/Animes/getSearchResults";
 
 export const useSearchForm = ({ key }) => {
   const [loading, setLoading] = useState(false);

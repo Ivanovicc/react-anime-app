@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Loading } from "components/Loading/loadingPage";
 /* Hooks */
-import { useDetail } from "hooks/useDetails";
+import { useDetail } from "hooks/Animes/useDetails";
 import { usePageTitle } from "hooks/usePageTitle";
 /* Styles */
 import { FavoriteBorderRounded, StarOutlineRounded } from "@mui/icons-material";

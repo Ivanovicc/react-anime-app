@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { emisionPreview, popularPreview, ratingPreview } from "api/getPreviews";
+import {
+  emisionPreview,
+  popularPreview,
+  ratingPreview,
+} from "api/Animes/getPreviews";
 
 export const usePreviews = () => {
   const [loading, setLoading] = useState(false);

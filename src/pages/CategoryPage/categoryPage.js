@@ -2,8 +2,8 @@ import { CategoryList } from "components/CategoryList/categoryList";
 import { ListPreview } from "components/Lists/listPreview";
 import { Loading } from "components/Loading/loadingPage";
 /* Hooks */
-import { useCategory } from "hooks/useCategory";
-import { useParentCategory } from "hooks/useListCategories";
+import { useCategory } from "hooks/Animes/useCategory";
+import { useParentCategory } from "hooks/Animes/useListCategories";
 import { usePageTitle } from "hooks/usePageTitle";
 
 export const CategoryPage = ({ params }) => {

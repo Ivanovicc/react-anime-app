@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import {
   categoryPopularPreview,
   categoryEmisionPreviews,
-} from "api/getPreviews";
+} from "api/Animes/getPreviews";
 
 export const useCategory = ({ id }) => {
   const [loading, setLoading] = useState(false);

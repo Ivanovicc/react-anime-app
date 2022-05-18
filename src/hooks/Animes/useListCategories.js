@@ -3,7 +3,7 @@ import {
   getCategories,
   getParentId,
   getCategoriesRelated,
-} from "api/getCategories";
+} from "api/Animes/getCategories";
 
 export const useListCategories = () => {
   const [listCategories, setListCategories] = useState([]);
