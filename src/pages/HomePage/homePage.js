@@ -4,8 +4,8 @@ import { ListPreview } from "components/Lists/listPreview";
 import { Loading } from "components/Loading/loadingPage";
 /* Hooks */
 import { usePageTitle } from "hooks/usePageTitle";
-import { usePreviews } from "hooks/usePreviews";
-import { useListCategories } from "hooks/useListCategories";
+import { usePreviews } from "hooks/Animes/usePreviews";
+import { useListCategories } from "hooks/Animes/useListCategories";
 /* Styles */
 import "./home.css";
 

@@ -1,6 +1,6 @@
 import { AnimeList } from "components/Lists/animesList";
 import { PaginationList } from "components/Pagination/paginationList";
-import { useSearchForm } from "hooks/useSearch";
+import { useSearchForm } from "hooks/Animes/useSearch";
 import { usePageTitle } from "hooks/usePageTitle";
 import { Loading } from "components/Loading/loadingPage";
 

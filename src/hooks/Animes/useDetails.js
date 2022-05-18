@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAnimeDetails } from "api/getAnimeDetails";
+import { getAnimeDetails } from "api/Animes/getAnimeDetails";
 
 export const useDetail = ({ slug }) => {
   const [loading, setLoading] = useState(false);
