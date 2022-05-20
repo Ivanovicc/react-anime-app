@@ -9,7 +9,7 @@ export const ListPreview = ({ title, animes }) => {
         <h3>{title}</h3>
       </div>
       <div className="preview-grid">
-        {animes.map(({ title, poster, id, type, slug }) => {
+        {animes?.map(({ title, poster, id, type, slug }) => {
           return (
             <AnimeCard
               key={id}

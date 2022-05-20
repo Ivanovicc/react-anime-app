@@ -1,10 +1,15 @@
-import { Link } from "wouter";
+/* Components */
 import { Loading } from "components/Loading/loadingPage";
+import { CoverImage } from "components/CoverImage/coverImage";
+import { SideBarSection } from "components/SideBarSection/sideBar";
+import { CenterColumnContent } from "components/CenterColumnContent/centerContent";
+import { SideColumnContent } from "components/SideColumnContent/sideContent";
 /* Hooks */
 import { useDetail } from "hooks/Animes/useDetails";
 import { usePageTitle } from "hooks/usePageTitle";
+import { formatDate } from "hooks/formatDate";
+import { formatHour } from "hooks/formatDuration";
 /* Styles */
-import { FavoriteBorderRounded, StarOutlineRounded } from "@mui/icons-material";
 import "./detail.css";
 
 export const DetailPage = ({ params }) => {
@@ -22,111 +27,41 @@ export const DetailPage = ({ params }) => {
       ) : (
         <main className="main-details">
           <div className="row">
-            <div className="cover-wrapper">
-              <div>
-                <img
-                  className="cover-image"
-                  src={animeDetails.coverImage?.original}
-                  alt={animeDetails.canonicalTitle}
-                />
-                <div className="overlay"></div>
-              </div>
-            </div>
+            <CoverImage
+              altName={animeDetails.canonicalTitle}
+              imageCover={animeDetails.coverImage?.original}
+            />
             <section className="section-details container">
-              <div className="sidebar-section">
-                <div className="aside-wrap">
-                  <div className="poster-wrap">
-                    <img
-                      src={animeDetails.posterImage?.medium}
-                      className="poster-img"
-                      alt={animeDetails.canonicalTitle}
-                    />
-                  </div>
-                  <div className="ranking-wrap">
-                    <span className="popular-rank ranking">
-                      <FavoriteBorderRounded />
-                      N°{animeDetails.popularityRank} en popularidad
-                    </span>
-                    <span className="rating-rank ranking">
-                      <StarOutlineRounded />
-                      N°{animeDetails.ratingRank} en mejor evaluado
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <SideBarSection
+                altName={animeDetails.canonicalTitle}
+                imagePoster={animeDetails.posterImage?.medium}
+                rankPopularity={animeDetails.popularityRank}
+                rankRating={animeDetails.ratingRank}
+              />
               <div className="div-center row">
                 <div className="row">
-                  <div className="col-center">
-                    <div className="title-anime">
-                      <h1 className="canonical-title">
-                        {animeDetails.canonicalTitle}
-                      </h1>
-                      <h3>{animeDetails.startDate?.substring(0, 4)}</h3>
-                    </div>
-                    <div className="rating-anime">
-                      <h4
-                        className={
-                          animeDetails.averageRating >= 74
-                            ? "average-rating"
-                            : "average-rating less"
-                        }
-                      >
-                        {animeDetails.averageRating}% de popularidad en la
-                        comunidad
-                      </h4>
-                    </div>
-                    <div className="description-anime">
-                      <p className="description">{animeDetails.description}</p>
-                    </div>
-                    <div className="wrap-tags">
-                      <ul className="tags-list">
-                        {animeCategories.map((name) => {
-                          return (
-                            <li key={name} className="tags-item">
-                              <Link to={`/anime/category/${name}`}>
-                                <a>{name}</a>
-                              </Link>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-center right-side">
-                    <div className="info-wrap">
-                      <h4>Detalles del Anime</h4>
-                      <ul>
-                        <li>
-                          <strong>Inglés</strong>
-                          <span>{animeDetails.titles?.en}</span>
-                        </li>
-                        <li>
-                          <strong>Japones</strong>
-                          <span>{animeDetails.titles?.ja_jp}</span>
-                        </li>
-                        <li>
-                          <strong>Japones (Romaji)</strong>
-                          <span>{animeDetails.titles?.en_jp}</span>
-                        </li>
-                        <li>
-                          <strong>Episodios</strong>
-                          <span>{animeDetails.episodeLength}</span>
-                        </li>
-                        <li>
-                          <strong>Estado</strong>
-                          <span>{animeDetails.status}</span>
-                        </li>
-                        <li>
-                          <strong></strong>
-                          <span></span>
-                        </li>
-                        <li>
-                          <strong></strong>
-                          <span></span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  <CenterColumnContent
+                    titleAnime={animeDetails.canonicalTitle}
+                    animeDate={animeDetails.startDate?.substring(0, 4)}
+                    description={animeDetails.description}
+                    ratingAverage={animeDetails.averageRating}
+                    tagsList={animeCategories}
+                  />
+                  <SideColumnContent
+                    sideTitle="Detalles del Anime"
+                    englishTitle={animeDetails.titles?.en}
+                    japanTitle={animeDetails.titles?.ja_jp}
+                    romajiTitle={animeDetails.titles?.en_jp}
+                    episodes={animeDetails.episodeCount}
+                    status={animeDetails.status}
+                    emisionDate={formatDate(
+                      animeDetails?.startDate,
+                      animeDetails?.endDate
+                    )}
+                    ratingAge={animeDetails.ageRating}
+                    ratingGuide={animeDetails.ageRatingGuide}
+                    animeLength={formatHour(animeDetails.totalLength)}
+                  />
                 </div>
               </div>
             </section>
