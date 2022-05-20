@@ -1,5 +1,6 @@
 .cover-wrapper {
-  height: 400px;
+  overflow: hidden;
+  height: 350px;
   width: 100%;
   position: relative;
 }
@@ -8,7 +9,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 400px;
+  height: 350px;
   width: 100%;
   position: relative;
 }
@@ -20,10 +21,6 @@
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
-/* 
-.section-details {
-  max-width: 1140px;
-} */
 
 /* -------------------- SIDEBAR ----------------------- */
 .sidebar-section {
@@ -62,15 +59,16 @@
 
 .ranking-wrap .popular-rank {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: baseline;
   position: relative;
   top: -10px;
 }
 
 .ranking-wrap {
+  width: 100%;
   position: relative;
-  padding: 10px;
+  padding: 5px 0;
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 500;
@@ -108,8 +106,8 @@
   flex-grow: 1;
   max-width: 100%;
   min-height: 1px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .title-anime h1 {
@@ -137,7 +135,6 @@
 .rating-anime {
   margin-top: -20px;
   font-size: 16px;
-  font-weight: 700;
 }
 
 .description-anime {
@@ -172,7 +169,7 @@
 /* ----------------------SECTION RIGHT------------------------- */
 
 .right-side {
-  max-width: 310px;
+  max-width: 320px;
   padding-right: 0;
 }
 
@@ -180,11 +177,9 @@
   position: relative;
   top: 0;
   margin-bottom: 15px;
-  background: var(--bg-secondary);
-  border-radius: 5px;
 }
 
-.info-wrap h5 {
+.info-wrap h4 {
   font-size: 16px;
   margin-bottom: 10px;
 }
@@ -199,7 +194,7 @@
 .info-wrap li {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .info-wrap li > strong {
