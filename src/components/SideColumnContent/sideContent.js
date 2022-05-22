@@ -1,14 +1,20 @@
+import { formatDate } from "hooks/formatDate";
+import { formatHour } from "hooks/formatDuration";
+
 export const SideColumnContent = ({
   sideTitle,
+  dateTitle,
   englishTitle,
   japanTitle,
   romajiTitle,
   episodes,
   status,
-  emisionDate,
+  startDate,
+  endDate,
   ratingAge,
   ratingGuide,
   animeLength,
+  serialization,
 }) => {
   return (
     <div className="col-center right-side">
@@ -35,17 +41,25 @@ export const SideColumnContent = ({
             <strong>Estado </strong>
             <span>{status}</span>
           </li>
-          <li style={{ display: emisionDate ? "flex" : "none" }}>
-            <strong>Emitido </strong>
-            <span>{emisionDate}</span>
+          <li style={{ display: startDate || endDate ? "flex" : "none" }}>
+            <strong>{dateTitle}</strong>
+            <span>{formatDate(startDate, endDate)}</span>
           </li>
-          <li style={{ display: ratingAge || ratingGuide ? "flex" : "none" }}>
+          <li>
             <strong>Clasificación </strong>
-            <span>{ratingAge + " - " + ratingGuide}</span>
+            <span>
+              {ratingGuide === null
+                ? ratingAge
+                : ratingAge + " - " + ratingGuide}
+            </span>
           </li>
           <li style={{ display: animeLength ? "flex" : "none" }}>
             <strong>Duración </strong>
-            <span>{animeLength}</span>
+            <span>{formatHour(animeLength)}</span>
+          </li>
+          <li style={{ display: serialization ? "flex" : "none" }}>
+            <strong>Serailizacion </strong>
+            <span>{serialization}</span>
           </li>
         </ul>
       </div>

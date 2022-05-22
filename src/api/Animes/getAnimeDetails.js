@@ -10,9 +10,9 @@ const apiResponseAnimeDetail = (apiResponse) => {
   return { anime, categories };
 };
 
-export const getAnimeDetails = ({ slug }) => {
+export const getAnimeDetails = ({ content, slug }) => {
   return fetch(
-    `${API_URL}/anime?fields[categories]=slug%2Ctitle&filter[slug]=${slug}&include=categories`
+    `${API_URL}/${content}?fields[categories]=slug%2Ctitle&filter[slug]=${slug}&include=categories`
   )
     .then((res) => {
       return res.json();

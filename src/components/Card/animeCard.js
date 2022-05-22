@@ -5,7 +5,7 @@ import "./card.css";
 export const AnimeCard = ({ title, slug, poster, type }) => {
   return (
     <div className="anime-card">
-      <Link to={`/anime_details/${slug}`}>
+      <Link to={`/${type}/details/${slug}`}>
         <a>
           <div className="card-wrapper">
             <div className="poster-wrapper">
@@ -13,9 +13,8 @@ export const AnimeCard = ({ title, slug, poster, type }) => {
                 alt={title}
                 className="poster-card"
                 src={poster}
-                lazy="loaded"
+                loading="lazy"
               />
-              {/*  <span className="span-type">{type}</span> */}
             </div>
             <div className="card-title">
               <h4 className="title-name">{title}</h4>

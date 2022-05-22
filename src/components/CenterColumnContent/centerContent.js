@@ -11,7 +11,7 @@ export const CenterColumnContent = ({
     <div className="col-center">
       <div className="title-anime">
         <h1 className="canonical-title">{titleAnime}</h1>
-        <h3>{animeDate}</h3>
+        <h3>{animeDate?.substring(0, 4)}</h3>
       </div>
       <div className="rating-anime">
         <h4

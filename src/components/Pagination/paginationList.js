@@ -1,9 +1,16 @@
+import { useTransition } from "react";
 import ReactPaginate from "react-paginate";
 /* Styles */
 import "./paginationList.css";
 
 export const PaginationList = ({ setPageOffset, count, offset }) => {
-  const handleNext = (event) => setPageOffset(event.selected);
+  const [isPending, startTransition] = useTransition();
+
+  const handleNext = (event) => {
+    startTransition(() => {
+      setPageOffset(event.selected);
+    });
+  };
 
   return (
     <div className="paginate-wrap">

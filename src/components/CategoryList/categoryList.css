@@ -1,6 +1,5 @@
 .category-wrapper {
   display: block;
-  padding: 15px;
 }
 
 .category-list ul {
@@ -9,9 +8,17 @@
   margin-bottom: 42px;
   padding-left: 0;
   font-size: 16px;
-  font-weight: 600;
 }
 
 .category-list ul li {
   min-width: 50%;
+  padding: 2px 0;
+}
+
+.category-list ul li a {
+  transition: color 0.4s linear;
+}
+
+.category-list ul li a:hover {
+  color: var(--btn-secondary);
 }

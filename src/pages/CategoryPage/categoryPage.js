@@ -11,7 +11,7 @@ export const CategoryPage = ({ params }) => {
   const { categoryPopular, categoryEmision, loading } = useCategory({ id });
   const { categoryRelated, loadingCategories } = useParentCategory({ id });
 
-  usePageTitle(!id ? "Cargando..." : `Animes de ${id}`);
+  usePageTitle(!id ? "Cargando..." : `Animes sobre ${id}`);
 
   return (
     <>
@@ -22,13 +22,15 @@ export const CategoryPage = ({ params }) => {
           <div className="main-col col-anime">
             <div className="main-body container">
               <ListPreview
-                animes={categoryEmision}
+                toPage="/anime/category/in-emision"
+                animes={categoryEmision.animes}
                 title={`Anime sobre ${id} en emision`}
               />
             </div>
             <div className="main-body container">
               <ListPreview
-                animes={categoryPopular}
+                toPage="/anime/category/most-popular"
+                animes={categoryPopular.animes}
                 title={`Anime sobre ${id} más populares`}
               />
             </div>
