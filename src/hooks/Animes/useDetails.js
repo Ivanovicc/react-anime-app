@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import { getAnimeDetails } from "api/Animes/getAnimeDetails";
 
-export const useDetail = ({ slug }) => {
+export const useDetail = ({ content, slug }) => {
   const [loading, setLoading] = useState(false);
   const [animeDetails, setAnimeDetails] = useState({});
   const [animeCategories, setAnimeCategories] = useState([]);
 
   useEffect(() => {
     setLoading(true);
-    getAnimeDetails({ slug }).then((res) => {
+    getAnimeDetails({ content, slug }).then((res) => {
       setAnimeDetails(res.anime);
       setAnimeCategories(res.categories);
       setLoading(false);
     });
-  }, [slug]);
+  }, [content, slug]);
 
   return { animeDetails, animeCategories, loading };
 };

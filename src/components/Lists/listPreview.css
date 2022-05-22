@@ -7,15 +7,51 @@
   padding-top: 10px;
 }
 
+.preview-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.preview-link a {
+  padding-right: 15px;
+  transition: color 0.4s linear;
+}
+
+.preview-link a:hover {
+  color: var(--btn-secondary);
+}
+
 .section-title {
   font-size: 16px;
-  font-weight: 300;
   margin-bottom: -15px;
-  font-weight: 400;
 }
 
 .preview-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-gap: 1.25rem;
+  grid-gap: 0.75rem;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .preview-section {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: -15px;
+  }
+
+  .preview-grid {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

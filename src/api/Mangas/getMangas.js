@@ -4,11 +4,11 @@ const apiResponseMangas = (apiResponse) => {
   const { data = [] } = apiResponse;
   if (Array.isArray(data)) {
     const mangas = data.map((manga) => {
-      const { attributes, id } = manga;
+      const { attributes, id, type } = manga;
       const poster = attributes.posterImage?.small;
       const slug = attributes.slug;
       const title = attributes.canonicalTitle;
-      return { title, slug, id, poster };
+      return { title, slug, id, poster, type };
     });
     return mangas;
   }

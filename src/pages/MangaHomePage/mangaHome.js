@@ -20,6 +20,7 @@ export const MangaHomePage = () => {
           <div className="main-col col-manga">
             <div className="main-body container">
               <ListPreview
+                toPage="/mangas/popular-publication"
                 animes={mangaInEmision}
                 title="Mangas más populares en publicación"
               />
@@ -27,6 +28,7 @@ export const MangaHomePage = () => {
 
             <div className="main-body container">
               <ListPreview
+                toPage="/mangas/most-popular"
                 animes={mangaMostPopular}
                 title="Mangas más populares"
               />
@@ -34,6 +36,7 @@ export const MangaHomePage = () => {
 
             <div className="main-body container">
               <ListPreview
+                toPage="/mangas/top-rated"
                 animes={mangaBestRating}
                 title="Mangas mejor evaluados"
               />
