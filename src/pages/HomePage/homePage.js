@@ -1,47 +1,41 @@
 /* Components */
 import { CategoryList } from "components/CategoryList/categoryList";
 import { ListPreview } from "components/Lists/listPreview";
-import { Loading } from "components/Loading/loadingPage";
+import { SkeletonLoading } from "components/Loading/skeletonLoading";
 /* Hooks */
 import { usePageTitle } from "hooks/usePageTitle";
-import {
-  useEmisionPreviews,
-  usePopularPreviews,
-  useRatingPreviews,
-} from "hooks/Animes/usePreviews";
+import { useAnimes } from "hooks/useAnimes";
 import { useListCategories } from "hooks/Animes/useListCategories";
 /* Styles */
 import "./home.css";
 
 export const HomePage = () => {
-  const limit = 5;
-  const { inEmision, loading } = useEmisionPreviews({ limit });
-  const { popular } = usePopularPreviews({ limit });
-  const { rating } = useRatingPreviews({ limit });
   const { listCategories } = useListCategories();
+  const { state, loading } = useAnimes();
+  const { popularAnime, topRatedAnime, inEmisionAnime } = state;
 
   usePageTitle("Inicio");
 
   return (
     <>
       {loading ? (
-        <Loading />
+        <SkeletonLoading />
       ) : (
         <main className="main-home row">
           <div className="main-col col-anime">
             <ListPreview
               toPage="/anime/popular-emision"
-              animes={inEmision.animes}
+              animes={inEmisionAnime.slice(0, 5)}
               title="Animes más populares en emision"
             />
             <ListPreview
               toPage="/anime/most-popular"
-              animes={popular.animes}
+              animes={popularAnime.slice(0, 5)}
               title="Animes más populares"
             />
             <ListPreview
               toPage="/anime/top-rated"
-              animes={rating.animes}
+              animes={topRatedAnime.slice(0, 5)}
               title="Animes mejor evaluados"
             />
           </div>

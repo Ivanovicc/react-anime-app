@@ -11,6 +11,8 @@ export const SideBarSection = ({
       <div className="aside-wrap">
         <div className="poster-wrap">
           <img
+            width="190"
+            height="270"
             loading="lazy"
             src={imagePoster}
             className="poster-img"
@@ -22,7 +24,10 @@ export const SideBarSection = ({
             <FavoriteBorderRounded />
             N°{rankPopularity} en popularidad
           </span>
-          <span className="rating-rank ranking">
+          <span
+            className="rating-rank ranking"
+            style={{ display: rankRating ? "inherit" : "none" }}
+          >
             <StarOutlineRounded />
             N°{rankRating} mejor evaluado
           </span>

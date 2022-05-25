@@ -12,10 +12,10 @@
   justify-content: space-between;
   align-items: center;
   height: 40px;
+  margin-bottom: -10px;
 }
 
 .preview-link a {
-  padding-right: 15px;
   transition: color 0.4s linear;
 }
 
@@ -23,15 +23,10 @@
   color: var(--btn-secondary);
 }
 
-.section-title {
-  font-size: 16px;
-  margin-bottom: -15px;
-}
-
 .preview-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-gap: 0.75rem;
+  grid-gap: 1rem;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {

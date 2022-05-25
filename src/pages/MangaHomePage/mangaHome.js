@@ -3,7 +3,7 @@ import { useMangaPreviews } from "hooks/Mangas/useMangaPreviews";
 import { usePageTitle } from "hooks/usePageTitle";
 /* Components */
 import { ListPreview } from "components/Lists/listPreview";
-import { Loading } from "components/Loading/loadingPage";
+import { SkeletonLoading } from "components/Loading/skeletonLoading";
 
 export const MangaHomePage = () => {
   const { loadingMangas, mangaBestRating, mangaInEmision, mangaMostPopular } =
@@ -14,7 +14,7 @@ export const MangaHomePage = () => {
   return (
     <>
       {loadingMangas ? (
-        <Loading />
+        <SkeletonLoading />
       ) : (
         <main className="main-manga row">
           <div className="main-col col-manga">

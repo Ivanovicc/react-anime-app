@@ -11,13 +11,8 @@
   display: block;
   border-radius: 5px;
   object-fit: fill;
-  transition: opacity 0.4s linear;
-  opacity: 0;
 }
 
-.poster-wrapper .poster-card {
-  opacity: 1;
-}
 /* .span-type {
   float: right;
   top: -280px;
@@ -43,6 +38,7 @@
 
 .title-name {
   overflow: hidden;
+  font-weight: 300;
   white-space: nowrap;
   text-overflow: ellipsis;
   line-height: 1.5;

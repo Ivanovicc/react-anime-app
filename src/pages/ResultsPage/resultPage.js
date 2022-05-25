@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 /* Components */
 import { AnimeList } from "components/Lists/animesList";
 import { PaginationList } from "components/Pagination/paginationList";
@@ -11,6 +10,9 @@ export const ResultsPage = ({ params }) => {
   const { key } = params;
   const { result, setPageOffset, pageCount, pageOffset, loading } =
     useSearchForm({ key });
+
+  const { animes, meta } = result;
+
   usePageTitle("Resultados de busqueda");
 
   return (
@@ -20,16 +22,15 @@ export const ResultsPage = ({ params }) => {
       ) : (
         <>
           <AnimeList
-            animes={result.animes}
-            title={`Resultados de "${decodeURI(key)}"`}
+            animes={animes}
+            title={`${meta?.count} resultados de "${decodeURI(key)}"`}
           />
-          <Suspense fallback={<Loading />}>
-            <PaginationList
-              count={pageCount}
-              offset={pageOffset}
-              setPageOffset={setPageOffset}
-            />
-          </Suspense>
+
+          <PaginationList
+            count={pageCount}
+            offset={pageOffset}
+            setPageOffset={setPageOffset}
+          />
         </>
       )}
     </main>

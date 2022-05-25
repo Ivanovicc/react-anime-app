@@ -134,7 +134,6 @@
 
 .rating-anime {
   margin-top: -20px;
-  font-size: 16px;
 }
 
 .description-anime {
@@ -143,8 +142,12 @@
 
 .description-anime p {
   white-space: pre-line;
-  overflow-y: hidden;
+  overflow: hidden;
   overflow-wrap: break-word;
+}
+
+.wrap-tags {
+  margin-top: 40px;
 }
 
 .wrap-tags ul {
@@ -164,6 +167,13 @@
   border: 1px solid var(--bg-primary);
   border-radius: 10px;
   padding: 4px 8px;
+  transition: color 0.4s linear;
+}
+
+.tags-item a:hover {
+  border-color: transparent;
+  background-color: #0a0909;
+  color: var(--btn-secondary);
 }
 
 /* ----------------------SECTION RIGHT------------------------- */

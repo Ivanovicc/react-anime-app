@@ -16,6 +16,18 @@ const apiResponseAnimes = (apiResponse) => {
   return [];
 };
 
+/* export const getAnimes = ({ filter, sort, limit, pageOffset = 0 } = {}) => {
+  return fetch(
+    `${API_URL}/anime?filter?${filter}&page[limit]=${limit}&page[offset]=${
+      limit * pageOffset
+    }&sort?=${sort}`
+  )
+    .then((res) => {
+      return res.json();
+    })
+    .then(apiResponseAnimes);
+}; */
+
 export const popularPreview = ({ limit, pageOffset = 0 } = {}) => {
   return fetch(
     `${API_URL}/anime?page[limit]=${limit}&page[offset]=${
