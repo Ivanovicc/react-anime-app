@@ -1,6 +1,10 @@
 import { useTransition } from "react";
 import ReactPaginate from "react-paginate";
 /* Styles */
+import {
+  ArrowBackIosRounded,
+  ArrowForwardIosRounded,
+} from "@mui/icons-material";
 import "./paginationList.css";
 
 export const PaginationList = ({ setPageOffset, count, offset }) => {
@@ -9,14 +13,15 @@ export const PaginationList = ({ setPageOffset, count, offset }) => {
   const handleNext = (event) => {
     startTransition(() => {
       setPageOffset(event.selected);
+      window.scrollTo(0, 0);
     });
   };
 
   return (
     <div className="paginate-wrap">
       <ReactPaginate
-        previousLabel="<"
-        nextLabel=">"
+        previousLabel={<ArrowBackIosRounded />}
+        nextLabel={<ArrowForwardIosRounded />}
         pageClassName="page-item"
         pageLinkClassName="page-link"
         previousClassName="page-item"

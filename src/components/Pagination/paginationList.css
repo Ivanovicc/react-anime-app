@@ -34,6 +34,10 @@
   padding: 0 6px;
 }
 
+.page-item .page-link svg {
+  font-size: 1rem;
+}
+
 .page-item .page-link:hover {
   background: var(--btn-primary);
 }

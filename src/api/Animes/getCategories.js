@@ -23,7 +23,7 @@ const apiResponseParentId = (apiResponse) => {
   return [];
 };
 
-export const getParentId = ({ id }) => {
+export const getParentId = ({ id = "" }) => {
   return fetch(
     `${API_URL}/categories?filter[slug]=${id}&include=parent.parent&page[limit]=10&page[offset]=0`
   )
@@ -33,9 +33,9 @@ export const getParentId = ({ id }) => {
     .then(apiResponseParentId);
 };
 
-export const getCategoriesRelated = ({ parentId = "" } = {}) => {
+export const getCategoriesRelated = ({ parentId }) => {
   return fetch(
-    `${API_URL}/categories?filter[parent_id]=${parentId}&page[limit]=50&page[offset]=0`
+    `${API_URL}/categories?filter[parent_id]=${parentId}&page[limit]=30&page[offset]=0`
   )
     .then((res) => {
       return res.json();
@@ -45,7 +45,7 @@ export const getCategoriesRelated = ({ parentId = "" } = {}) => {
 
 export const getCategories = () => {
   return fetch(
-    `${API_URL}/categories?page[limit]=40&page[offset]=0&sort=-total_media_count`
+    `${API_URL}/categories?page[limit]=50&page[offset]=0&sort=-total_media_count`
   )
     .then((res) => {
       return res.json();

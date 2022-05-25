@@ -14,6 +14,8 @@ export const AnimeCard = ({ title, slug, poster, type }) => {
                 className="poster-card"
                 src={poster}
                 loading="lazy"
+                width="170"
+                height="240"
               />
             </div>
             <div className="card-title">

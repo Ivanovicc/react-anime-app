@@ -16,9 +16,9 @@
 
 .navbar-box a,
 .nav-title a {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
-  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  transition: color 0.4s linear;
 }
 
 .navbar-box a:hover,

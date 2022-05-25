@@ -18,7 +18,7 @@ export const MostPopular = () => {
         <Loading />
       ) : (
         <main className="main-popular container">
-          <AnimeList animes={popular.animes} title="Animes populares" />
+          <AnimeList animes={popular.animes} title="Animes más populares" />
 
           <PaginationList
             count={pageCount}

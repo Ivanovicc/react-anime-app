@@ -1,6 +1,8 @@
+/* Components */
 import { CategoryList } from "components/CategoryList/categoryList";
 import { ListPreview } from "components/Lists/listPreview";
 import { Loading } from "components/Loading/loadingPage";
+import { SkeletonLoading } from "components/Loading/skeletonLoading";
 /* Hooks */
 import { useCategory } from "hooks/Animes/useCategory";
 import { useParentCategory } from "hooks/Animes/useListCategories";
@@ -16,7 +18,7 @@ export const CategoryPage = ({ params }) => {
   return (
     <>
       {loading ? (
-        <Loading />
+        <SkeletonLoading />
       ) : (
         <main className="main-category row">
           <div className="main-col col-anime">
@@ -24,20 +26,20 @@ export const CategoryPage = ({ params }) => {
               <ListPreview
                 toPage="/anime/category/in-emision"
                 animes={categoryEmision.animes}
-                title={`Anime sobre ${id} en emision`}
+                title={`Animes sobre ${id} en emision`}
               />
             </div>
             <div className="main-body container">
               <ListPreview
                 toPage="/anime/category/most-popular"
                 animes={categoryPopular.animes}
-                title={`Anime sobre ${id} más populares`}
+                title={`Animes sobre ${id} más populares`}
               />
             </div>
           </div>
           <div className="main-col col-category">
-            {loading ? (
-              <Loading />
+            {loadingCategories ? (
+              <SkeletonLoading />
             ) : (
               <CategoryList
                 list={categoryRelated}
