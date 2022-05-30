@@ -9,4 +9,4 @@ Una pagina sobre animes, hecha con React y la [API](https://kitsu.docs.apiary.io
 - Ver una lista de animes por categorias.
 - Realizar la busqueda de un anime en concreto.
 
-Ademas de una sección para los fanáticos del manga 🤓.
+
