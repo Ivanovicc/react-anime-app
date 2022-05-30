@@ -17,20 +17,22 @@ export const useListCategories = () => {
 
 export const useParentCategory = ({ id }) => {
   const [loadingCategories, setLoadingCategories] = useState(false);
-  const [parentId, setParentId] = useState({});
+  const [parentId, setParentId] = useState(228);
   const [categoryRelated, setCategoryRelated] = useState([]);
 
   useEffect(() => {
-    getParentId({ id }).then((parentId) => {
-      setParentId(parentId);
+    setLoadingCategories(true);
+    getParentId({ id }).then((res) => {
+      setParentId(res);
+      setLoadingCategories(false);
     });
   }, [id]);
 
   useEffect(() => {
-    /*   setLoadingCategories(true); */
+    setLoadingCategories(true);
     getCategoriesRelated({ parentId }).then((res) => {
       setCategoryRelated(res);
-      /*     setLoadingCategories(false); */
+      setLoadingCategories(false);
     });
   }, [parentId]);
 

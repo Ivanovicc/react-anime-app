@@ -6,16 +6,16 @@ export const formatHour = (duration) => {
   const minutes = Math.floor(minutesToDecimal);
 
   if (duration < 60) {
-    return `${duration} min en total`;
+    return `${duration}  min en total`;
   }
 
   if (duration === 60) {
-    return `${hours} hora en total`;
+    return `${hours}  hora en total`;
   }
 
   if (minutes === 0) {
-    return `${newHour} hr en total`;
+    return `${newHour}  hr en total`;
   }
 
-  return `${newHour} hr ${minutes} min en total`;
+  return `${newHour}  hr, ${minutes}  min en total`;
 };

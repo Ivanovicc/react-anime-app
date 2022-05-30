@@ -10,5 +10,5 @@ export const formatDate = (params1, params2) => {
   if (params1 === params2) {
     return `${start}`;
   }
-  return `${start} hasta ${end}`;
+  return `${start}  hasta  ${end}`;
 };

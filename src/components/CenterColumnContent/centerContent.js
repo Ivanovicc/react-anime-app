@@ -36,7 +36,7 @@ export const CenterColumnContent = ({
           {tagsList?.map((name) => {
             return (
               <li key={name} className="tags-item">
-                <Link to={`/anime/category/${name}`}>
+                <Link to={`/category/${name}`}>
                   <a>{name}</a>
                 </Link>
               </li>
