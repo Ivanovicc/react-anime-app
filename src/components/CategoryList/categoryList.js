@@ -11,7 +11,7 @@ export const CategoryList = ({ title, list }) => {
           {list?.map(({ slug, id }) => {
             return (
               <li key={id}>
-                <Link to={`/anime/category/${slug}`}>
+                <Link to={`/category/${slug}`}>
                   <a>{slug}</a>
                 </Link>
               </li>

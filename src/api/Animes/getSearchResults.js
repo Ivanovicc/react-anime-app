@@ -9,8 +9,8 @@ const apiResponseAnimes = (apiResponse) => {
       const poster = attributes.posterImage?.small;
       const slug = attributes.slug;
       const title = attributes.canonicalTitle;
-
-      return { title, slug, id, poster, type };
+      const subType = attributes.subtype;
+      return { title, slug, id, poster, type, subType };
     });
     return { animes, meta };
   }

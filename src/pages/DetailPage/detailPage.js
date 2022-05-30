@@ -22,9 +22,6 @@ export const DetailPage = ({ params }) => {
   );
 
   const emision = (status) => {
-    if (content === "manga" && status === "current") {
-      return "En publicacion";
-    }
     if (status === "current") {
       return "En emision";
     }
@@ -63,7 +60,6 @@ export const DetailPage = ({ params }) => {
                 />
                 <SideColumnContent
                   sideTitle="Más Informacion"
-                  dateTitle={content === "anime" ? "Emision" : "Publicado"}
                   englishTitle={animeDetails.titles?.en}
                   japanTitle={animeDetails.titles?.ja_jp}
                   romajiTitle={animeDetails.titles?.en_jp}
@@ -74,7 +70,6 @@ export const DetailPage = ({ params }) => {
                   ratingAge={animeDetails.ageRating}
                   ratingGuide={animeDetails.ageRatingGuide}
                   animeLength={animeDetails.totalLength}
-                  serialization={animeDetails.serialization}
                 />
               </div>
             </div>

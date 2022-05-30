@@ -9,13 +9,10 @@ export const NavBar = () => {
       <div className="nav container">
         <div className="nav-title">
           <Link to="/">
-            <a>サクラ</a>
+            <a>Sakura サクラ</a>
           </Link>
         </div>
         <div className="navbar-box">
-          <Link to="/mangas">
-            <a>Mangas</a>
-          </Link>
           <SearchBar />
         </div>
       </div>

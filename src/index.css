@@ -46,6 +46,7 @@ body {
   line-height: 1.5;
   margin: 0;
   scroll-behavior: smooth;
+  height: 100vh;
 }
 
 ol,

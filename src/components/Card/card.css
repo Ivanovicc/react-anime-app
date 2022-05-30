@@ -13,19 +13,19 @@
   object-fit: fill;
 }
 
-/* .span-type {
-  float: right;
-  top: -280px;
-  right: 0.5rem;
-  border-radius: 10px;
-  text-transform: capitalize;
+.span-type {
+  position: absolute;
+  padding: 2px 6px;
   font-weight: 500;
-  background-color: var(--btn-primary);
-  font-size: 0.75rem;
-  padding: 4px 8px;
-  position: relative;
+  text-transform: capitalize;
+  font-size: 13px;
+  background: var(--btn-primary);
+  border-radius: 5px;
+  margin: 5px auto;
+  left: 5px;
+  top: 0;
 }
- */
+
 .card-title {
   display: flex;
   align-items: center;

@@ -9,7 +9,7 @@ export const AnimeList = ({ animes, title }) => {
         <h3>{title}</h3>
       </div>
       <div className="list-grid">
-        {animes?.map(({ id, poster, title, type, slug }) => {
+        {animes?.map(({ id, poster, title, type, slug, subType }) => {
           return (
             <AnimeCard
               key={id}
@@ -17,6 +17,7 @@ export const AnimeList = ({ animes, title }) => {
               title={title}
               type={type}
               poster={poster}
+              subType={subType}
             />
           );
         })}

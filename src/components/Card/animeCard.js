@@ -2,7 +2,7 @@ import { Link } from "wouter";
 /* Styles */
 import "./card.css";
 
-export const AnimeCard = ({ title, slug, poster, type }) => {
+export const AnimeCard = ({ title, slug, poster, type, subType }) => {
   return (
     <div className="anime-card">
       <Link to={`/${type}/details/${slug}`}>
@@ -17,6 +17,7 @@ export const AnimeCard = ({ title, slug, poster, type }) => {
                 width="170"
                 height="240"
               />
+              <span className="span-type">{subType}</span>
             </div>
             <div className="card-title">
               <h4 className="title-name">{title}</h4>

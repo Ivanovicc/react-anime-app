@@ -9,24 +9,13 @@ const apiResponseAnimes = (apiResponse) => {
       const poster = attributes.posterImage?.small;
       const slug = attributes.slug;
       const title = attributes.canonicalTitle;
-      return { title, slug, id, poster, type };
+      const subType = attributes.subtype;
+      return { title, slug, id, poster, type, subType };
     });
     return { animes, meta };
   }
   return [];
 };
-
-/* export const getAnimes = ({ filter, sort, limit, pageOffset = 0 } = {}) => {
-  return fetch(
-    `${API_URL}/anime?filter?${filter}&page[limit]=${limit}&page[offset]=${
-      limit * pageOffset
-    }&sort?=${sort}`
-  )
-    .then((res) => {
-      return res.json();
-    })
-    .then(apiResponseAnimes);
-}; */
 
 export const popularPreview = ({ limit, pageOffset = 0 } = {}) => {
   return fetch(
@@ -57,26 +46,6 @@ export const emisionPreview = ({ limit, pageOffset = 0 } = {}) => {
     `${API_URL}/anime?filter[status]=current&page[limit]=${limit}&page[offset]=${
       limit * pageOffset
     }&sort=-user_count`
-  )
-    .then((res) => {
-      return res.json();
-    })
-    .then(apiResponseAnimes);
-};
-
-export const categoryPopularPreview = ({ id }) => {
-  return fetch(
-    `${API_URL}/anime?filter[categories]=${id}&page[limit]=10&page[offset]=0&sort=-user_count`
-  )
-    .then((res) => {
-      return res.json();
-    })
-    .then(apiResponseAnimes);
-};
-
-export const categoryEmisionPreviews = ({ id }) => {
-  return fetch(
-    `${API_URL}/anime?filter[categories]=${id}&page[limit]=10&page[offset]=0&sort=-start_date`
   )
     .then((res) => {
       return res.json();

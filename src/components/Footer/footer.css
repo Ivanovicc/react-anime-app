@@ -1,0 +1,39 @@
+.footer-section {
+  margin-top: auto;
+  height: 120px;
+  padding: 10px;
+  background: var(--bg-primary);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-title {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.bottom-title h3 {
+  height: 20px;
+}
+
+.bottom-media {
+  display: flex;
+  width: 10%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact-link:hover {
+  color: var(--btn-secondary);
+  transition: color 0.4s linear;
+}
+
+.contact-link span svg {
+  width: 26px;
+  height: 26px;
+}

@@ -1,7 +1,6 @@
 /* Components */
 import { CategoryList } from "components/CategoryList/categoryList";
 import { ListPreview } from "components/Lists/listPreview";
-import { Loading } from "components/Loading/loadingPage";
 import { SkeletonLoading } from "components/Loading/skeletonLoading";
 /* Hooks */
 import { useCategory } from "hooks/Animes/useCategory";
@@ -24,14 +23,14 @@ export const CategoryPage = ({ params }) => {
           <div className="main-col col-anime">
             <div className="main-body container">
               <ListPreview
-                toPage="/anime/category/in-emision"
+                toPage={`/category/in-emision/${id}`}
                 animes={categoryEmision.animes}
                 title={`Animes sobre ${id} en emision`}
               />
             </div>
             <div className="main-body container">
               <ListPreview
-                toPage="/anime/category/most-popular"
+                toPage={`/category/most-popular/${id}`}
                 animes={categoryPopular.animes}
                 title={`Animes sobre ${id} más populares`}
               />
