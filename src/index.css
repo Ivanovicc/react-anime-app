@@ -35,6 +35,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -45,8 +46,9 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
-  scroll-behavior: smooth;
-  height: 100vh;
+  position: relative;
+  padding-bottom: 200px;
+  min-height: 100vh;
 }
 
 ol,
@@ -121,10 +123,13 @@ button {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 150px;
+  }
+
   .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding: 0 0.5rem;
   }
 }

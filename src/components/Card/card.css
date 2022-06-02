@@ -43,3 +43,19 @@
   text-overflow: ellipsis;
   line-height: 1.5;
 }
+
+/* Mobile */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .preview-grid .anime-card:nth-child(5) {
+    display: none;
+  }
+
+  .span-type {
+    font-size: 0.75rem;
+  }
+
+  .title-name {
+    font-size: 0.85rem;
+  }
+}

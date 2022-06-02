@@ -9,11 +9,28 @@
 
 .section-title {
   height: 40px;
-  margin-bottom: -10px;
+  margin-bottom: -15px;
 }
 
 .list-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-gap: 1rem;
+}
+
+/* Mobile */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .list-section {
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 0.85rem;
+  }
+
+  .list-grid {
+    grid-gap: 0.75rem;
+  }
 }

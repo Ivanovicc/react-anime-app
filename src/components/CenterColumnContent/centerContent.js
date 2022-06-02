@@ -30,7 +30,7 @@ export const CenterColumnContent = ({
       </div>
       <div className="wrap-tags">
         <div className="tags-title">
-          <h4>Categorias: </h4>
+          <h4>Categorías: </h4>
         </div>
         <ul className="tags-list">
           {tagsList?.map((name) => {

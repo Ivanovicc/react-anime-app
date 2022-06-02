@@ -26,7 +26,7 @@ export const HomePage = () => {
             <ListPreview
               toPage="/anime/popular-emision"
               animes={inEmisionAnime.slice(0, 5)}
-              title="Animes más populares en emision"
+              title="Animes más populares en emisión"
             />
             <ListPreview
               toPage="/anime/most-popular"
@@ -40,12 +40,10 @@ export const HomePage = () => {
             />
           </div>
           <div className="main-col col-category">
-            <CategoryList list={listCategories} title="Categorias" />
+            <CategoryList list={listCategories} title="Categorías" />
           </div>
         </main>
       )}
     </>
   );
 };
-
-

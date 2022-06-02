@@ -40,7 +40,7 @@ export const SideColumnContent = ({
             <span>{status}</span>
           </li>
           <li style={{ display: startDate || endDate ? "flex" : "none" }}>
-            <strong>Emision </strong>
+            <strong>Emisión </strong>
             <span>{formatDate(startDate, endDate)}</span>
           </li>
           <li>
