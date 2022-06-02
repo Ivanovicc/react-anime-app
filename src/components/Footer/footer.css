@@ -1,15 +1,17 @@
 .footer-section {
   margin-top: auto;
-  height: 120px;
-  padding: 10px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 4px 8px;
   background: var(--bg-primary);
 }
 
 .footer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  max-width: 1240px;
 }
 
 .bottom-title {
@@ -19,6 +21,8 @@
 
 .bottom-title h3 {
   height: 20px;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .bottom-media {
@@ -33,7 +37,38 @@
   transition: color 0.4s linear;
 }
 
-.contact-link span svg {
+.contact-link .github svg {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-link .linkedin svg {
   width: 26px;
   height: 26px;
+}
+
+/* Mobile */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .bottom-title h3 {
+    font-size: 1rem;
+  }
+
+  .footer {
+    max-width: 100%;
+  }
+
+  .bottom-media {
+    width: 30%;
+  }
+
+  .contact-link .github svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .contact-link .linkedin svg {
+    width: 28px;
+    height: 28px;
+  }
 }

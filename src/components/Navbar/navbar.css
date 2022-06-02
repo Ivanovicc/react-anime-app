@@ -14,14 +14,12 @@
   max-width: 1240px;
 }
 
-.navbar-box a,
 .nav-title a {
   font-size: 18px;
   font-weight: 700;
   transition: color 0.4s linear;
 }
 
-.navbar-box a:hover,
 .nav-title a:hover {
   color: var(--btn-secondary) !important;
 }
@@ -31,6 +29,16 @@
   align-items: baseline;
 }
 
-.navbar-box a {
-  margin-right: 20px;
+/* Mobile */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .nav {
+    max-width: 100%;
+  }
+
+  .nav-title a {
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color 0.4s linear;
+  }
 }

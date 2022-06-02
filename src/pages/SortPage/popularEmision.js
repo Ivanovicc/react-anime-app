@@ -5,6 +5,8 @@ import { PaginationList } from "components/Pagination/paginationList";
 /* Hooks */
 import { useEmisionPreviews } from "hooks/Animes/usePreviews";
 import { usePageTitle } from "hooks/usePageTitle";
+/* Styles */
+import "./sortPage.css";
 
 export const PopularInEmision = () => {
   const { inEmision, pageCount, pageOffset, setPageOffset, loading } =
@@ -22,12 +24,13 @@ export const PopularInEmision = () => {
             animes={inEmision.animes}
             title="Animes populares en emision"
           />
-
-          <PaginationList
-            count={pageCount}
-            offset={pageOffset}
-            setPageOffset={setPageOffset}
-          />
+          <div className="pag-container">
+            <PaginationList
+              count={pageCount}
+              offset={pageOffset}
+              setPageOffset={setPageOffset}
+            />
+          </div>
         </main>
       )}
     </>

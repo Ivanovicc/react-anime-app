@@ -14,7 +14,7 @@ export const Footer = () => {
         <div className="bottom-media">
           <Link to={`${GITHUB}`}>
             <a className="contact-link">
-              <span>
+              <span className="github">
                 <GitHub />
               </span>
             </a>
@@ -22,7 +22,7 @@ export const Footer = () => {
 
           <Link to={`${LINKEDIN}`}>
             <a className="contact-link">
-              <span>
+              <span className="linkedin">
                 <LinkedIn />
               </span>
             </a>

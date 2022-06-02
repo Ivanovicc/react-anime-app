@@ -5,6 +5,8 @@ import { PaginationList } from "components/Pagination/paginationList";
 /* Hooks */
 import { useRatingPreviews } from "hooks/Animes/usePreviews";
 import { usePageTitle } from "hooks/usePageTitle";
+/* Styles */
+import "./sortPage.css";
 
 export const TopRated = () => {
   const { rating, pageCount, pageOffset, setPageOffset, loading } =
@@ -19,12 +21,13 @@ export const TopRated = () => {
       ) : (
         <main className="main-rating container">
           <AnimeList animes={rating.animes} title="Animes mejor evaluados" />
-
-          <PaginationList
-            count={pageCount}
-            offset={pageOffset}
-            setPageOffset={setPageOffset}
-          />
+          <div className="pag-container">
+            <PaginationList
+              count={pageCount}
+              offset={pageOffset}
+              setPageOffset={setPageOffset}
+            />{" "}
+          </div>
         </main>
       )}
     </>

@@ -37,3 +37,6 @@
   height: 20px;
   fill: var(--text-primary);
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+}

@@ -23,7 +23,7 @@ export const DetailPage = ({ params }) => {
 
   const emision = (status) => {
     if (status === "current") {
-      return "En emision";
+      return "En emisión";
     }
     if (status === "finished") {
       return "Finalizado";
@@ -59,7 +59,7 @@ export const DetailPage = ({ params }) => {
                   tagsList={animeCategories}
                 />
                 <SideColumnContent
-                  sideTitle="Más Informacion"
+                  sideTitle="Más información"
                   englishTitle={animeDetails.titles?.en}
                   japanTitle={animeDetails.titles?.ja_jp}
                   romajiTitle={animeDetails.titles?.en_jp}

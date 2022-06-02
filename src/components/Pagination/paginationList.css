@@ -46,3 +46,17 @@
   background: var(--btn-primary);
   position: relative;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .paginate-wrap {
+    padding: 0;
+  }
+
+  .page-item .page-link {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    margin: 0 4px;
+    padding: 0 4px;
+  }
+}
