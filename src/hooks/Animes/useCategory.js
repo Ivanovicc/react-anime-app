@@ -30,7 +30,6 @@ export const useCategory = ({ id }) => {
   useEffect(() => {
     setLoading(true);
     getParentId({ id }).then((res) => {
-      console.log({ res });
       setParentId(res);
       setLoading(false);
     });
