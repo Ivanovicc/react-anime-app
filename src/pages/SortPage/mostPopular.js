@@ -10,7 +10,7 @@ import "./sortPage.css";
 
 export const MostPopular = () => {
   const { loading, pageCount, popular, setPageOffset, pageOffset } =
-    usePopularPreviews({ limit: 18 });
+    usePopularPreviews({ limit: 20 });
 
   usePageTitle("Animes populares");
 

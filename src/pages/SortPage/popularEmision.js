@@ -10,7 +10,7 @@ import "./sortPage.css";
 
 export const PopularInEmision = () => {
   const { inEmision, pageCount, pageOffset, setPageOffset, loading } =
-    useEmisionPreviews({ limit: 18 });
+    useEmisionPreviews({ limit: 20 });
 
   usePageTitle("Animes populares en emision");
 

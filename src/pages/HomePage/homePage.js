@@ -4,7 +4,7 @@ import { ListPreview } from "components/Lists/listPreview";
 import { SkeletonLoading } from "components/Loading/skeletonLoading";
 /* Hooks */
 import { usePageTitle } from "hooks/usePageTitle";
-import { useAnimes } from "hooks/useAnimes";
+import { useAnimes } from "hooks/Animes/useAnimes";
 import { useListCategories } from "hooks/Animes/useListCategories";
 /* Styles */
 import "./home.css";
@@ -21,7 +21,7 @@ export const HomePage = () => {
       {loading ? (
         <SkeletonLoading />
       ) : (
-        <main className="main-home row">
+        <main className="main-home row container">
           <div className="main-col col-anime">
             <ListPreview
               toPage="/anime/popular-emision"

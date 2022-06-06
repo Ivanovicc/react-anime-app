@@ -10,7 +10,7 @@ import "./sortPage.css";
 
 export const TopRated = () => {
   const { rating, pageCount, pageOffset, setPageOffset, loading } =
-    useRatingPreviews({ limit: 18 });
+    useRatingPreviews({ limit: 20 });
 
   usePageTitle("Animes mejor evaluados");
 

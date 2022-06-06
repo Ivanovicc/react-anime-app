@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  getCategories,
-  getParentId,
-  getCategoriesRelated,
-} from "api/Animes/getCategories";
+import { getCategories, getCategoriesRelated } from "api/Animes/getCategories";
 
 export const useListCategories = () => {
   const [listCategories, setListCategories] = useState([]);
@@ -15,26 +11,19 @@ export const useListCategories = () => {
   return { listCategories };
 };
 
-export const useParentCategory = ({ id }) => {
+export const useParentCategory = ({ parentId }) => {
+  console.log({ parentId });
+  const { parent } = parentId;
   const [loadingCategories, setLoadingCategories] = useState(false);
-  const [parentId, setParentId] = useState(228);
   const [categoryRelated, setCategoryRelated] = useState([]);
 
   useEffect(() => {
     setLoadingCategories(true);
-    getParentId({ id }).then((res) => {
-      setParentId(res);
-      setLoadingCategories(false);
-    });
-  }, [id]);
-
-  useEffect(() => {
-    setLoadingCategories(true);
-    getCategoriesRelated({ parentId }).then((res) => {
+    getCategoriesRelated({ parent }).then((res) => {
       setCategoryRelated(res);
       setLoadingCategories(false);
     });
-  }, [parentId]);
+  }, [parent]);
 
   return { categoryRelated, loadingCategories };
 };

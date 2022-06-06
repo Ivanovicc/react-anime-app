@@ -1,0 +1,33 @@
+.main-category {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.main-col .media-category {
+  margin-right: 15px;
+}
+.media-category {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.main-col .media-category .media-body {
+  top: 1px;
+}
+
+.media-body {
+  position: relative;
+}
+
+.media-body {
+  flex: 1 1;
+}
+
+.media-body h3 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.media-body p {
+  margin-top: -15px;
+}

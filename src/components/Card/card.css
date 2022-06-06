@@ -1,3 +1,89 @@
+@media (max-width: 1420px) {
+  .list-section .list-grid .anime-card,
+  .preview-section .preview-grid .anime-card {
+    width: 20%;
+  }
+}
+
+.list-section .list-grid .anime-card,
+.preview-section .preview-grid .anime-card {
+  padding-right: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.list-section .anime-card,
+.main-col .preview-section .anime-card {
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.list-section .list-grid .grid-poster,
+.preview-section .preview-grid .grid-poster {
+  cursor: pointer;
+  position: relative;
+}
+
+.list-section .list-grid .anime-card img,
+.preview-section .preview-grid .anime-card img {
+  border-radius: 5px;
+}
+
+.lazy-image img {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.lazy-image .span-type {
+  position: absolute;
+  padding: 2px 6px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 14px;
+  background: var(--btn-primary);
+  border-radius: 5px;
+  margin: 5px auto;
+  left: 5px;
+  top: 0;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  top: -5px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.title-name {
+  overflow: hidden;
+  font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+
+.list-section .list-grid .grid-poster .poster-overlay,
+.preview-section .preview-grid .grid-poster .poster-overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+}
+
+.list-section .list-grid .grid-poster .poster-overlay > a,
+.preview-section .preview-grid .grid-poster .poster-overlay > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* 
 .anime-card {
   margin-top: 10px;
 }
@@ -43,7 +129,7 @@
   text-overflow: ellipsis;
   line-height: 1.5;
 }
-
+ */
 /* Mobile */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {

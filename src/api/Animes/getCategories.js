@@ -18,7 +18,7 @@ const apiResponseCategoriesAnimes = (apiResponse) => {
   if (Array.isArray(data)) {
     const animes = data.map((anime) => {
       const { attributes, id, type } = anime;
-      const poster = attributes.posterImage?.small;
+      const poster = attributes.posterImage?.medium;
       const slug = attributes.slug;
       const title = attributes.canonicalTitle;
       const subType = attributes.subtype;
@@ -31,11 +31,10 @@ const apiResponseCategoriesAnimes = (apiResponse) => {
 
 const apiResponseParentId = (apiResponse) => {
   const { data = [], included = [] } = apiResponse;
-  const parents = included[0].id;
+  const parent = included[0].id;
   const { attributes } = data[0];
   const info = attributes.description;
-  console.log(info);
-  return parents;
+  return { parent, info };
 };
 
 /* CATEGORY PAGE */
@@ -52,7 +51,7 @@ export const categoryPopularPreview = ({ id }) => {
 
 export const categoryEmisionPreviews = ({ id }) => {
   return fetch(
-    `${API_URL}/anime?filter[categories]=${id}&page[limit]=10&page[offset]=0&sort=-start_date`
+    `${API_URL}/anime?filter[categories]=${id}&filter[status]=current%2Cfinished&page[limit]=10&page[offset]=0&sort=-start_date`
   )
     .then((res) => {
       return res.json();
@@ -82,9 +81,9 @@ export const getParentId = ({ id = "" }) => {
     .then(apiResponseParentId);
 };
 
-export const getCategoriesRelated = ({ parentId }) => {
+export const getCategoriesRelated = ({ parent }) => {
   return fetch(
-    `${API_URL}/categories?filter[parent_id]=${parentId}&page[limit]=30&page[offset]=0`
+    `${API_URL}/categories?filter[parent_id]=${parent}&page[limit]=30&page[offset]=0`
   )
     .then((res) => {
       return res.json();
