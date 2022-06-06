@@ -12,7 +12,6 @@ export const useListCategories = () => {
 };
 
 export const useParentCategory = ({ parentId }) => {
-  console.log({ parentId });
   const { parent } = parentId;
   const [loadingCategories, setLoadingCategories] = useState(false);
   const [categoryRelated, setCategoryRelated] = useState([]);
