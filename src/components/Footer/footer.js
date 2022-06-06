@@ -1,6 +1,4 @@
 import { GitHub, LinkedIn } from "@mui/icons-material";
-import { Link } from "wouter";
-import { GITHUB, LINKEDIN } from "api/settings";
 /* Styles */
 import "./footer.css";
 
@@ -12,21 +10,27 @@ export const Footer = () => {
           <h3>Gracias por su visita!</h3>
         </div>
         <div className="bottom-media">
-          <Link to={`${GITHUB}`}>
-            <a className="contact-link">
-              <span className="github">
-                <GitHub />
-              </span>
-            </a>
-          </Link>
+          <a
+            className="contact-link"
+            href="https://github.com/Ivanovicc/react-anime-app"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <span className="github">
+              <GitHub />
+            </span>
+          </a>
 
-          <Link to={`${LINKEDIN}`}>
-            <a className="contact-link">
-              <span className="linkedin">
-                <LinkedIn />
-              </span>
-            </a>
-          </Link>
+          <a
+            className="contact-link"
+            href="https://www.linkedin.com/in/ivan-acosta-carabajal-085931190/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <span className="linkedin">
+              <LinkedIn />
+            </span>
+          </a>
         </div>
       </div>
     </footer>
