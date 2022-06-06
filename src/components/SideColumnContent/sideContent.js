@@ -1,5 +1,6 @@
 import { formatDate } from "hooks/formatDate";
 import { formatHour } from "hooks/formatDuration";
+import { toCapitalize } from "hooks/toCapitalize";
 
 export const SideColumnContent = ({
   sideTitle,
@@ -12,31 +13,41 @@ export const SideColumnContent = ({
   endDate,
   ratingAge,
   ratingGuide,
-  animeLength,
+  episodeLength,
+  subType,
 }) => {
+  const noContent = (content) => {
+    let display = content ? "flex" : "none";
+    return display;
+  };
+
   return (
     <div className="main-col right-side">
       <div className="info-wrap">
         <div className="info-container">
           <h4>{sideTitle}</h4>
           <ul>
-            <li style={{ display: englishTitle ? "flex" : "none" }}>
+            <li style={{ display: noContent(englishTitle) }}>
               <strong>Inglés </strong>
               <span>{englishTitle}</span>
             </li>
-            <li style={{ display: japanTitle ? "flex" : "none" }}>
+            <li style={{ display: noContent(japanTitle) }}>
               <strong>Japones </strong>
               <span>{japanTitle}</span>
             </li>
-            <li style={{ display: romajiTitle ? "flex" : "none" }}>
+            <li style={{ display: noContent(romajiTitle) }}>
               <strong>Japones (Romaji) </strong>
               <span>{romajiTitle}</span>
             </li>
-            <li style={{ display: episodes ? "flex" : "none" }}>
+            <li style={{ display: noContent(subType) }}>
+              <strong>Tipo </strong>
+              <span>{toCapitalize(subType)}</span>
+            </li>
+            <li style={{ display: noContent(episodes) }}>
               <strong>Episodios </strong>
               <span>{episodes}</span>
             </li>
-            <li style={{ display: status ? "flex" : "none" }}>
+            <li style={{ display: noContent(status) }}>
               <strong>Estado </strong>
               <span>{status}</span>
             </li>
@@ -52,9 +63,13 @@ export const SideColumnContent = ({
                   : ratingAge + " - " + ratingGuide}
               </span>
             </li>
-            <li style={{ display: animeLength ? "flex" : "none" }}>
+            <li style={{ display: noContent(episodeLength) }}>
               <strong>Duración </strong>
-              <span>{formatHour(animeLength)}</span>
+              <span>
+                {status === "En emisión"
+                  ? `${episodeLength} minutos`
+                  : formatHour(episodes, episodeLength)}
+              </span>
             </li>
           </ul>
         </div>

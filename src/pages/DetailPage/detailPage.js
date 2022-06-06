@@ -69,7 +69,8 @@ export const DetailPage = ({ params }) => {
                   endDate={animeDetails?.endDate}
                   ratingAge={animeDetails.ageRating}
                   ratingGuide={animeDetails.ageRatingGuide}
-                  animeLength={animeDetails.totalLength}
+                  episodeLength={animeDetails.episodeLength}
+                  subType={animeDetails.subtype}
                 />
               </div>
             </div>
