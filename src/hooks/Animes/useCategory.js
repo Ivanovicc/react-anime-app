@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   categoryPopularPreview,
+  getParentId,
   categoryEmisionPreviews,
 } from "api/Animes/getCategories";
 
@@ -8,6 +9,7 @@ export const useCategory = ({ id }) => {
   const [loading, setLoading] = useState(false);
   const [categoryPopular, setCategoryPopular] = useState([]);
   const [categoryEmision, setCategoryEmision] = useState([]);
+  const [parentId, setParentId] = useState({});
 
   useEffect(() => {
     setLoading(true);
@@ -25,5 +27,14 @@ export const useCategory = ({ id }) => {
     });
   }, [id]);
 
-  return { categoryPopular, categoryEmision, loading };
+  useEffect(() => {
+    setLoading(true);
+    getParentId({ id }).then((res) => {
+      console.log({ res });
+      setParentId(res);
+      setLoading(false);
+    });
+  }, [id]);
+
+  return { categoryPopular, categoryEmision, loading, parentId };
 };

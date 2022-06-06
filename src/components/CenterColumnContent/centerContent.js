@@ -8,7 +8,7 @@ export const CenterColumnContent = ({
   tagsList,
 }) => {
   return (
-    <div className="col-center">
+    <div className="main-col">
       <div className="title-anime">
         <h1 className="canonical-title">{titleAnime}</h1>
         <h3>{animeDate?.substring(0, 4)}</h3>
@@ -36,9 +36,7 @@ export const CenterColumnContent = ({
           {tagsList?.map((name) => {
             return (
               <li key={name} className="tags-item">
-                <Link to={`/category/${name}`}>
-                  <a>{name}</a>
-                </Link>
+                <Link to={`/category/${name}`}>{name}</Link>
               </li>
             );
           })}

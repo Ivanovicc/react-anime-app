@@ -11,8 +11,6 @@ export const SideBarSection = ({
       <div className="aside-wrap">
         <div className="poster-wrap">
           <img
-            width="190"
-            height="270"
             loading="lazy"
             src={imagePoster}
             className="poster-img"

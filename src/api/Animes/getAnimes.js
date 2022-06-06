@@ -6,7 +6,7 @@ const apiResponseAnimes = (apiResponse) => {
   if (Array.isArray(data)) {
     const animes = data.map((anime) => {
       const { attributes, id, type } = anime;
-      const poster = attributes.posterImage?.small;
+      const poster = attributes.posterImage?.medium;
       const slug = attributes.slug;
       const title = attributes.canonicalTitle;
       const subType = attributes.subtype;

@@ -6,7 +6,7 @@
 }
 
 .cover-wrapper .cover-image {
-  background-size: cover;
+  object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 350px;
@@ -26,7 +26,7 @@
 .sidebar-section {
   position: relative;
   top: 0;
-  max-width: 400px;
+  width: 195px;
   float: left;
 }
 
@@ -40,8 +40,8 @@
 }
 
 .aside-wrap .poster-wrap img {
-  width: 190px;
-  height: 270px;
+  width: 195px;
+  height: 277px;
 }
 
 .sidebar-section .aside-wrap img {
@@ -96,11 +96,15 @@
 /* ----------------------SECTION CENTER------------------------- */
 
 .div-center {
-  margin-left: 220px;
-  max-width: 920px;
+  margin-left: 215px;
+  max-width: 910px;
 }
 
-.col-center {
+.div-center .row {
+  width: 100%;
+}
+
+/* .col-center {
   position: relative;
   flex-basis: 0;
   flex-grow: 1;
@@ -108,7 +112,7 @@
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-}
+} */
 
 .title-anime h1 {
   display: inline;
@@ -179,40 +183,47 @@
 /* ----------------------SECTION RIGHT------------------------- */
 
 .right-side {
-  max-width: 320px;
+  max-width: 310px;
   padding-right: 0;
 }
 
-.info-wrap {
-  position: relative;
-  top: 0;
-  margin-bottom: 15px;
+@media screen and (max-height: 1200px) {
+  .info-wrap {
+    position: relative;
+    top: 0;
+  }
 }
 
-.info-wrap h4 {
+.info-container {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.info-container h4 {
   font-size: 16px;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
-.info-wrap ul {
+.info-container ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   font-size: 14px;
 }
 
-.info-wrap li {
+.info-container li {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
 
-.info-wrap li > strong {
+.info-container li > strong {
   width: 100px;
   max-width: 35%;
 }
 
-.info-wrap li > span {
+.info-container li > span {
   max-width: 65%;
   display: inline-flex;
   align-items: center;
@@ -282,20 +293,20 @@
     margin: 0 10px;
   }
 
-  .info-wrap h4 {
+  .info-container h4 {
     font-size: 1rem;
   }
 
-  .info-wrap ul {
+  .info-container ul {
     font-weight: 300;
   }
 
-  .info-wrap li > strong {
+  .info-container li > strong {
     width: 200px;
     max-width: 45%;
   }
 
-  .info-wrap li > span {
+  .info-container li > span {
     max-width: 50%;
     display: inline-flex;
     align-items: center;

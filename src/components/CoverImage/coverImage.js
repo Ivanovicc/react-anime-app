@@ -3,11 +3,9 @@ export const CoverImage = ({ imageCover, altName }) => {
     <div className="cover-wrapper">
       <div>
         <img
-          width="1350"
-          height="350"
           loading="lazy"
           className="cover-image"
-          src={imageCover}
+          src={imageCover ? imageCover : "/images/coverDefault.jpg"}
           alt={altName}
         />
         <div className="overlay"></div>

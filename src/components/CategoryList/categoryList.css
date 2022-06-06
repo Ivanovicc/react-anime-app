@@ -1,5 +1,16 @@
 .category-wrapper {
   display: block;
+  position: relative;
+}
+
+.category-container {
+  margin-left: 20px;
+}
+
+.category-wrapper h3 {
+  font-size: 17px;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 .category-list ul {

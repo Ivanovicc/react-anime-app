@@ -1,26 +1,26 @@
-.main-body {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-  max-width: 940px;
+.main-home {
+  margin-top: 20px;
+  padding: 0;
 }
 
-.main-col {
-  position: relative;
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+@media (min-width: 544px) {
+  .main-col {
+    position: relative;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 .col-anime {
-  padding-right: 0;
+  padding-left: 0;
 }
 
 .col-category {
-  max-width: 320px;
+  max-width: 300px;
   padding: 0;
 }
 
@@ -30,11 +30,6 @@
   .main-home {
     display: block;
     margin: 0;
-  }
-
-  .main-body {
-    display: flex;
-    flex-wrap: wrap;
   }
 
   .main-col {

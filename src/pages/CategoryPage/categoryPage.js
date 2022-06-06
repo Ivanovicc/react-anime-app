@@ -6,11 +6,17 @@ import { SkeletonLoading } from "components/Loading/skeletonLoading";
 import { useCategory } from "hooks/Animes/useCategory";
 import { useParentCategory } from "hooks/Animes/useListCategories";
 import { usePageTitle } from "hooks/usePageTitle";
+/* Styles */
+import "./categoryPage.css";
 
 export const CategoryPage = ({ params }) => {
   const { id } = params;
-  const { categoryPopular, categoryEmision, loading } = useCategory({ id });
-  const { categoryRelated, loadingCategories } = useParentCategory({ id });
+  const { categoryPopular, categoryEmision, loading, parentId } = useCategory({
+    id,
+  });
+  const { categoryRelated, loadingCategories } = useParentCategory({
+    parentId,
+  });
 
   usePageTitle(!id ? "Cargando..." : `Animes sobre ${id}`);
 
@@ -19,22 +25,24 @@ export const CategoryPage = ({ params }) => {
       {loading ? (
         <SkeletonLoading />
       ) : (
-        <main className="main-category row">
+        <main className="main-category row container">
           <div className="main-col col-anime">
-            <div className="main-body container">
-              <ListPreview
-                toPage={`/category/in-emision/${id}`}
-                animes={categoryEmision.animes}
-                title={`Animes sobre ${id} en emision`}
-              />
+            <div className="media-category">
+              <div className="media-body">
+                <h3>Animes sobre {id}</h3>
+                <p>{parentId.info}</p>
+              </div>
             </div>
-            <div className="main-body container">
-              <ListPreview
-                toPage={`/category/most-popular/${id}`}
-                animes={categoryPopular.animes}
-                title={`Animes sobre ${id} más populares`}
-              />
-            </div>
+            <ListPreview
+              toPage={`/category/in-emision/${id}`}
+              animes={categoryEmision.animes}
+              title={`Animes sobre ${id} recientes`}
+            />
+            <ListPreview
+              toPage={`/category/most-popular/${id}`}
+              animes={categoryPopular.animes}
+              title={`Animes sobre ${id} más populares`}
+            />
           </div>
           <div className="main-col col-category">
             {loadingCategories ? (
