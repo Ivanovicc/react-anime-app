@@ -7,18 +7,15 @@
   margin-left: 20px;
 }
 
-.category-wrapper h3 {
-  font-size: 17px;
-  margin-top: 5px;
-  margin-bottom: 15px;
+.category-wrapper h5 {
+  margin-bottom: 10px;
 }
 
 .category-list ul {
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: 42px;
   padding-left: 0;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .category-list ul li {
@@ -36,17 +33,13 @@
 
 /* Mobile */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .category-wrapper h3 {
-    font-size: 1rem;
+@media screen and (max-height: 660px) {
+  .category-wrapper {
+    position: relative;
+    top: 0;
   }
 
-  .category-list ul li a {
-    font-size: 0.85rem;
-  }
-
-  .category-list ul li {
-    min-width: 40%;
-    padding: 6px 0;
+  .category-container {
+    margin-left: 5px;
   }
 }

@@ -3,7 +3,7 @@
   position: absolute;
   width: 100%;
   bottom: 0;
-  padding: 4px 8px;
+  padding: 10px;
   background: var(--bg-primary);
 }
 
@@ -14,15 +14,10 @@
   padding: 0;
 }
 
-.bottom-title {
-  text-align: center;
-  margin-bottom: 5px;
-}
-
 .bottom-title h3 {
-  height: 20px;
   font-size: 18px;
   font-weight: 300;
+  margin-bottom: 0;
 }
 
 .bottom-media {

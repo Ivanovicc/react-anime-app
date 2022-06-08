@@ -1,11 +1,4 @@
-import { FavoriteBorderRounded, StarOutlineRounded } from "@mui/icons-material";
-
-export const SideBarSection = ({
-  imagePoster,
-  altName,
-  rankPopularity,
-  rankRating,
-}) => {
+export const SideBarSection = ({ imagePoster, altName }) => {
   return (
     <div className="sidebar-section">
       <div className="aside-wrap">
@@ -16,19 +9,6 @@ export const SideBarSection = ({
             className="poster-img"
             alt={altName}
           />
-        </div>
-        <div className="ranking-wrap">
-          <span className="popular-rank ranking">
-            <FavoriteBorderRounded />
-            N°{rankPopularity} en popularidad
-          </span>
-          <span
-            className="rating-rank ranking"
-            style={{ display: rankRating ? "inherit" : "none" }}
-          >
-            <StarOutlineRounded />
-            N°{rankRating} mejor evaluado
-          </span>
         </div>
       </div>
     </div>

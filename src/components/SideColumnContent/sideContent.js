@@ -25,7 +25,7 @@ export const SideColumnContent = ({
     <div className="main-col right-side">
       <div className="info-wrap">
         <div className="info-container">
-          <h4>{sideTitle}</h4>
+          <h5>{sideTitle}</h5>
           <ul>
             <li style={{ display: noContent(englishTitle) }}>
               <strong>Inglés </strong>

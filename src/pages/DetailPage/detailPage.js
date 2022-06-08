@@ -46,8 +46,6 @@ export const DetailPage = ({ params }) => {
             <SideBarSection
               altName={animeDetails.canonicalTitle}
               imagePoster={animeDetails.posterImage?.medium}
-              rankPopularity={animeDetails.popularityRank}
-              rankRating={animeDetails.ratingRank}
             />
             <div className="div-center row">
               <div className="row">
@@ -57,6 +55,8 @@ export const DetailPage = ({ params }) => {
                   description={animeDetails.description}
                   ratingAverage={animeDetails.averageRating}
                   tagsList={animeCategories}
+                  rankPopularity={animeDetails.popularityRank}
+                  rankRating={animeDetails.ratingRank}
                 />
                 <SideColumnContent
                   sideTitle="Más información"
