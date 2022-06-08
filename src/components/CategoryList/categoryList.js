@@ -6,15 +6,13 @@ export const CategoryList = ({ title, list }) => {
   return (
     <div className="category-wrapper">
       <div className="category-container">
-        <h3 className="wrap-title">{title}</h3>
+        <h5 className="wrap-title">{title}</h5>
         <div className="category-list">
           <ul>
             {list?.map(({ slug, id }) => {
               return (
                 <li key={id}>
-                  <Link to={`/category/${slug}`}>
-                    <a>{slug}</a>
-                  </Link>
+                  <Link to={`/category/${slug}`}>{slug}</Link>
                 </li>
               );
             })}

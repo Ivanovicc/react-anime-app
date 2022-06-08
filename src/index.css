@@ -29,8 +29,10 @@
   --btn-primary: #5626c4;
   --btn-secondary: #d83f87;
 
-  --assets-primary: #2cccc3;
-  --assets-secondary: #facd3d;
+  --assets-high: #2cccc3;
+  --assets-good: #2ccc74;
+  --assets-low: #facd3d;
+  --assets-very-low: #fa9d3d;
 }
 
 html {
@@ -56,11 +58,49 @@ ul {
   list-style: none;
 }
 
-a,
-p {
-  color: var(--text-primary);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: inherit;
   font-weight: 300;
   text-decoration: none;
+}
+
+p {
+  font-weight: 300;
 }
 
 img {
@@ -119,17 +159,5 @@ button {
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
-  }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
-    padding-bottom: 150px;
-  }
-
-  .container {
-    padding: 0 0.5rem;
   }
 }

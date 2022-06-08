@@ -6,7 +6,7 @@ export const AnimeList = ({ animes, title }) => {
   return (
     <div className="section-body">
       <div className="section-title">
-        <h3>{title}</h3>
+        <h5>{title}</h5>
       </div>
       <section className="list-section">
         <div className="list-grid container">

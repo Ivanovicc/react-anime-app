@@ -7,7 +7,7 @@ export const ListPreview = ({ title, animes, toPage }) => {
   return (
     <div className="main-body">
       <div className="preview-title">
-        <h3>{title}</h3>
+        <h5>{title}</h5>
         <div className="preview-link">
           <Link to={toPage}>Ver más</Link>
         </div>

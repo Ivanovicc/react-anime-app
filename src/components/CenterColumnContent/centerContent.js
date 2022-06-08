@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { FavoriteBorderRounded, StarOutlineRounded } from "@mui/icons-material";
 
 export const CenterColumnContent = ({
   titleAnime,
@@ -6,27 +7,48 @@ export const CenterColumnContent = ({
   ratingAverage,
   description,
   tagsList,
+  rankPopularity,
+  rankRating,
 }) => {
   return (
     <div className="main-col">
       <div className="title-anime">
-        <h1 className="canonical-title">{titleAnime}</h1>
-        <h3>{animeDate?.substring(0, 4)}</h3>
+        <h3 className="canonical-title">{titleAnime}</h3>
+        <h5>{animeDate?.substring(0, 4)}</h5>
       </div>
       <div
         className="rating-anime"
         style={{ display: ratingAverage ? "block" : "none" }}
       >
-        <h4
+        <span
           className={
-            ratingAverage >= 74 ? "average-rating" : "average-rating less"
+            ratingAverage <= 60
+              ? "average-rating very-low"
+              : "average-rating" && ratingAverage <= 70
+              ? "average-rating low"
+              : "average-rating" && ratingAverage <= 80
+              ? "average-rating good"
+              : "average-rating"
           }
         >
           {ratingAverage}% de popularidad en la comunidad
-        </h4>
+        </span>
       </div>
       <div className="description-anime">
         <p className="description">{description}</p>
+      </div>
+      <div className="ranking-wrap">
+        <span className="popular-rank ranking">
+          <FavoriteBorderRounded />
+          N°{rankPopularity} en popularidad
+        </span>
+        <span
+          className="rating-rank ranking"
+          style={{ display: rankRating ? "inherit" : "none" }}
+        >
+          <StarOutlineRounded />
+          N°{rankRating} mejor evaluado
+        </span>
       </div>
       <div className="wrap-tags">
         <div className="tags-title">

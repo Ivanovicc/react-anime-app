@@ -26,18 +26,10 @@
 
 /* Mobile */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .main-home {
-    display: block;
-    margin: 0;
-  }
-
-  .main-col {
-    padding: 0;
-  }
-
+@media (max-width: 543px) {
   .col-category {
-    margin: 0 15px;
-    width: 400px;
+    order: -1;
+    width: 100%;
+    max-width: 100%;
   }
 }

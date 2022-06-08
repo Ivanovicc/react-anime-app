@@ -5,6 +5,20 @@
   }
 }
 
+@media (max-width: 1220px) {
+  .list-section .list-grid .anime-card,
+  .preview-section .preview-grid .anime-card {
+    width: 25%;
+  }
+}
+
+@media (max-width: 990px) {
+  .list-section .list-grid .anime-card,
+  .preview-section .preview-grid .anime-card {
+    width: 50%;
+  }
+}
+
 .list-section .list-grid .anime-card,
 .preview-section .preview-grid .anime-card {
   padding-right: 15px;
@@ -136,8 +150,7 @@
   .preview-grid .anime-card:nth-child(5) {
     display: none;
   }
-
-  .span-type {
+  .lazy-image .span-type {
     font-size: 0.75rem;
   }
 

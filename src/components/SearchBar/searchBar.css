@@ -4,7 +4,7 @@
   align-items: flex-start;
   background: var(--bg-secondary);
   margin: auto;
-  padding: 6px 12px 6px 12px;
+  padding: 6px 12px;
   border-radius: 100px;
 }
 
@@ -16,6 +16,8 @@
   justify-content: center;
   background: transparent;
   border-color: transparent;
+  outline: none;
+  transition: 0.4s;
 }
 
 .form-input:focus-visible {
@@ -30,6 +32,7 @@
   width: 26px;
   height: 26px;
   border-radius: 50px;
+  transition: 0.4s;
 }
 
 .search-button svg {
@@ -38,5 +41,13 @@
   fill: var(--text-primary);
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-width: 767px) {
+  .form-input {
+    width: 65px;
+  }
+
+  .form-wrap:hover > .form-input {
+    width: 145px;
+    padding: 0 6px;
+  }
 }
