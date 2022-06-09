@@ -21,6 +21,7 @@ export const SideColumnContent = ({
     return display;
   };
 
+
   return (
     <div className="main-col right-side">
       <div className="info-wrap">

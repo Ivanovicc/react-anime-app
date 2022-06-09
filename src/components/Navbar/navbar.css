@@ -14,7 +14,7 @@
 .nav-title a {
   font-size: 18px;
   font-weight: 700;
-  transition: color 0.4s linear;
+  transition: color 0.4s ease-out;
 }
 
 .nav-title a:hover {
@@ -35,7 +35,5 @@
 
   .nav-title a {
     font-size: 1rem;
-    font-weight: 700;
-    transition: color 0.4s linear;
   }
 }

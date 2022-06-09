@@ -1,7 +1,7 @@
 /* Components */
 import { CategoryList } from "components/CategoryList/categoryList";
 import { ListPreview } from "components/Lists/listPreview";
-import { SkeletonLoading } from "components/Loading/skeletonLoading";
+import { Loading } from "components/Loading/loadingPage";
 /* Hooks */
 import { usePageTitle } from "hooks/usePageTitle";
 import { useAnimes } from "hooks/Animes/useAnimes";
@@ -19,7 +19,7 @@ export const HomePage = () => {
   return (
     <>
       {loading ? (
-        <SkeletonLoading />
+        <Loading />
       ) : (
         <main className="main-home row container">
           <div className="main-col col-anime">

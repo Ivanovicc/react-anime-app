@@ -1,27 +1,32 @@
 .main-body {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .main-col .preview-section {
+  margin-bottom: 10px;
+}
+
+.preview-section {
   margin: 0 auto;
   overflow: hidden;
   display: flex;
   flex-direction: row;
 }
 
-.preview-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.preview-link {
+  float: right;
   margin-right: 10px;
+  font-size: 15px;
 }
 
 .preview-link a {
-  transition: color 0.4s linear;
+  color: var(--btn-secondary);
+  transition: color 0.4s ease-out;
 }
 
 .preview-link a:hover {
   color: var(--btn-secondary);
+  color: #d83fc4;
 }
 
 .preview-grid {
@@ -33,15 +38,13 @@
 }
 
 /* Mobile */
-
-@media (max-width: 768px) {
-  .preview-title {
-    margin-right: 0;
-  }
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .preview-title h5 {
     font-size: 1rem;
-    margin-bottom: 0;
+  }
+
+  .preview-link {
+    margin-right: 0;
   }
 
   .preview-section .preview-grid {
@@ -51,7 +54,7 @@
   }
 
   .preview-section .preview-grid > .row {
-    margin-left: 0;
+    margin-left: 0px;
     margin-right: -10px;
   }
 }

@@ -1,7 +1,8 @@
 /* Components */
 import { CategoryList } from "components/CategoryList/categoryList";
 import { ListPreview } from "components/Lists/listPreview";
-import { SkeletonLoading } from "components/Loading/skeletonLoading";
+import { Loading } from "components/Loading/loadingPage";
+import { ReadMore } from "components/ReadMore/readMore";
 /* Hooks */
 import { useCategory } from "hooks/Animes/useCategory";
 import { useParentCategory } from "hooks/Animes/useListCategories";
@@ -23,14 +24,14 @@ export const CategoryPage = ({ params }) => {
   return (
     <>
       {loading ? (
-        <SkeletonLoading />
+        <Loading />
       ) : (
         <main className="main-category row container">
           <div className="main-col col-anime">
             <div className="media-category">
               <div className="media-body">
                 <h3>Animes sobre {id}</h3>
-                <p>{parentId.info}</p>
+                <ReadMore index={273} limit={280} text={parentId.info} />
               </div>
             </div>
             <ListPreview
@@ -46,7 +47,7 @@ export const CategoryPage = ({ params }) => {
           </div>
           <div className="main-col col-category">
             {loadingCategories ? (
-              <SkeletonLoading />
+              <Loading />
             ) : (
               <CategoryList
                 list={categoryRelated}

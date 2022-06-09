@@ -8,9 +8,6 @@ export const ListPreview = ({ title, animes, toPage }) => {
     <div className="main-body">
       <div className="preview-title">
         <h5>{title}</h5>
-        <div className="preview-link">
-          <Link to={toPage}>Ver más</Link>
-        </div>
       </div>
       <section className="preview-section">
         <div className="preview-grid container">
@@ -30,6 +27,9 @@ export const ListPreview = ({ title, animes, toPage }) => {
           </div>
         </div>
       </section>
+      <div className="preview-link">
+        <Link to={toPage}>Ver más</Link>
+      </div>
     </div>
   );
 };

@@ -18,7 +18,7 @@ export const AnimeCard = ({ title, slug, poster, type, subType }) => {
           </div>
 
           <div className="card-title">
-            <h6 className="title-name">{title}</h6>
+            <span className="title-name">{title}</span>
           </div>
 
           <div className="poster-overlay">
