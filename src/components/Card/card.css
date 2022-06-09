@@ -41,6 +41,23 @@
 .list-section .list-grid .anime-card img,
 .preview-section .preview-grid .anime-card img {
   border-radius: 5px;
+  transition: opacity 0.4s ease-out;
+}
+
+.list-section .list-grid .anime-card:hover img,
+.preview-section .preview-grid .anime-card:hover img {
+  opacity: 0.6;
+}
+
+.list-section .list-grid .anime-card:hover .span-type,
+.preview-section .preview-grid .anime-card:hover .span-type {
+  background: #5526c4f2;
+  color: var(--text-secondary);
+}
+
+.list-section .list-grid .anime-card:hover .title-name,
+.preview-section .preview-grid .anime-card:hover .title-name {
+  color: var(--btn-secondary);
 }
 
 .lazy-image img {
@@ -60,23 +77,21 @@
   margin: 5px auto;
   left: 5px;
   top: 0;
+  transition: color 0.4s ease-out;
 }
 
 .card-title {
-  display: flex;
-  align-items: center;
-  height: 40px;
-  top: -5px;
   position: relative;
-  transition: color 0.3s;
 }
 
 .title-name {
+  display: block;
+  font-size: 16px;
   overflow: hidden;
   font-weight: 300;
   white-space: nowrap;
   text-overflow: ellipsis;
-  line-height: 1.5;
+  transition: color 0.4s ease-out;
 }
 
 .list-section .list-grid .grid-poster .poster-overlay,
@@ -97,57 +112,10 @@
   height: 100%;
 }
 
-/* 
-.anime-card {
-  margin-top: 10px;
-}
-
-.card-wrapper {
-  position: relative;
-  cursor: pointer;
-}
-
-.poster-wrapper .poster-card {
-  display: block;
-  border-radius: 5px;
-  object-fit: fill;
-}
-
-.span-type {
-  position: absolute;
-  padding: 2px 6px;
-  font-weight: 500;
-  text-transform: capitalize;
-  font-size: 13px;
-  background: var(--btn-primary);
-  border-radius: 5px;
-  margin: 5px auto;
-  left: 5px;
-  top: 0;
-}
-
-.card-title {
-  display: flex;
-  align-items: center;
-  top: 5px;
-  width: 100%;
-  height: 20px;
-  position: relative;
-  transition: all 0.3s;
-}
-
-.title-name {
-  overflow: hidden;
-  font-weight: 300;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  line-height: 1.5;
-}
- */
 /* Mobile */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .preview-grid .anime-card:nth-child(5) {
+  .main-home .preview-grid .anime-card:nth-child(5) {
     display: none;
   }
   .lazy-image .span-type {
@@ -156,5 +124,6 @@
 
   .title-name {
     font-size: 0.85rem;
+    white-space: normal;
   }
 }

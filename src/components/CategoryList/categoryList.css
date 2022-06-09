@@ -24,7 +24,7 @@
 }
 
 .category-list ul li a {
-  transition: color 0.4s linear;
+  transition: color 0.4s ease-out;
 }
 
 .category-list ul li a:hover {
@@ -33,7 +33,7 @@
 
 /* Mobile */
 
-@media screen and (max-height: 660px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .category-wrapper {
     position: relative;
     top: 0;

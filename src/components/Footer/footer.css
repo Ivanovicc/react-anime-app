@@ -29,7 +29,7 @@
 
 .contact-link:hover {
   color: var(--btn-secondary);
-  transition: color 0.4s linear;
+  transition: color 0.4s ease-out;
 }
 
 .contact-link .github svg {

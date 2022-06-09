@@ -26,7 +26,7 @@
 
 /* Mobile */
 
-@media (max-width: 543px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .col-category {
     order: -1;
     width: 100%;

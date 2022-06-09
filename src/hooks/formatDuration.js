@@ -8,16 +8,16 @@ export const formatHour = (episodes, duration) => {
   const minutes = Math.ceil(minutesToDecimal);
 
   if (newHour === 0) {
-    return `${minutes} minutos en total`;
+    return `${minutes} minutos`;
   }
 
   if (newHour === 60) {
-    return `${hours} hora en total`;
+    return `${hours} hora`;
   }
 
   if (minutes === 0) {
-    return `${newHour} horas en total`;
+    return `${newHour} horas`;
   }
 
-  return `${newHour} hrs, ${minutes} mins en total`;
+  return `${newHour} horas, ${minutes} minutos`;
 };

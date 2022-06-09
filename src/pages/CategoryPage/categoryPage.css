@@ -20,10 +20,23 @@
   flex: 1 1;
 }
 
+.media-body p {
+  white-space: pre-line;
+  overflow-wrap: break-word;
+}
+
 /* Mobile */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .main-col .media-category {
+    margin-right: 10px;
+  }
+
   .media-body h3 {
     font-size: 1.25rem;
+  }
+
+  .media-body p {
+    font-size: 15px;
   }
 }

@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { FavoriteBorderRounded, StarOutlineRounded } from "@mui/icons-material";
+import { ReadMore } from "components/ReadMore/readMore";
 
 export const CenterColumnContent = ({
   titleAnime,
@@ -35,7 +36,7 @@ export const CenterColumnContent = ({
         </span>
       </div>
       <div className="description-anime">
-        <p className="description">{description}</p>
+        <ReadMore text={description} limit={480} index={479} />
       </div>
       <div className="ranking-wrap">
         <span className="popular-rank ranking">
