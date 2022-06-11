@@ -39,9 +39,11 @@ const apiResponseParentId = (apiResponse) => {
 
 /* CATEGORY PAGE */
 
-export const categoryPopularPreview = ({ id }) => {
+export const categoryPopularPreview = ({ id, limit = 20, page = 0 } = {}) => {
   return fetch(
-    `${API_URL}/anime?filter[categories]=${id}&page[limit]=10&page[offset]=0&sort=-user_count`
+    `${API_URL}/anime?filter[categories]=${id}&page[limit]=${limit}&page[offset]=${
+      limit * page
+    }&sort=-user_count`
   )
     .then((res) => {
       return res.json();
@@ -49,9 +51,11 @@ export const categoryPopularPreview = ({ id }) => {
     .then(apiResponseCategoriesAnimes);
 };
 
-export const categoryEmisionPreviews = ({ id }) => {
+export const categoryEmisionPreviews = ({ id, limit = 20, page = 0 } = {}) => {
   return fetch(
-    `${API_URL}/anime?filter[categories]=${id}&filter[status]=current%2Cfinished&page[limit]=10&page[offset]=0&sort=-start_date`
+    `${API_URL}/anime?filter[categories]=${id}&filter[status]=current%2Cfinished&page[limit]=${limit}&page[offset]=${
+      limit * page
+    }&sort=-start_date`
   )
     .then((res) => {
       return res.json();

@@ -31,17 +31,17 @@ export const CategoryPage = ({ params }) => {
             <div className="media-category">
               <div className="media-body">
                 <h3>Animes sobre {id}</h3>
-                <ReadMore index={273} limit={280} text={parentId.info} />
+                <ReadMore index={273} limit={300} text={parentId.info} />
               </div>
             </div>
             <ListPreview
-              toPage={`/category/in-emision/${id}`}
-              animes={categoryEmision.animes}
+              toPage={`/category/recents/${id}`}
+              animes={categoryEmision.animes?.slice(0, 10)}
               title={`Animes sobre ${id} recientes`}
             />
             <ListPreview
               toPage={`/category/most-popular/${id}`}
-              animes={categoryPopular.animes}
+              animes={categoryPopular.animes?.slice(0, 10)}
               title={`Animes sobre ${id} más populares`}
             />
           </div>

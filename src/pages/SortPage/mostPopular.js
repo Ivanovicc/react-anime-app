@@ -20,7 +20,10 @@ export const MostPopular = () => {
         <Loading />
       ) : (
         <main className="main-popular container">
-          <AnimeList animes={popular.animes} title="Animes más populares" />
+          <div className="section-title">
+            <h5>Animes más populares</h5>
+          </div>
+          <AnimeList animes={popular.animes} />
           <div className="pag-container">
             <PaginationList
               count={pageCount}

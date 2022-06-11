@@ -2,12 +2,9 @@ import { AnimeCard } from "components/Card/animeCard";
 /* Styles */
 import "./list.css";
 
-export const AnimeList = ({ animes, title }) => {
+export const AnimeList = ({ animes }) => {
   return (
     <div className="section-body">
-      <div className="section-title">
-        <h5>{title}</h5>
-      </div>
       <section className="list-section">
         <div className="list-grid container">
           <div className="row">
