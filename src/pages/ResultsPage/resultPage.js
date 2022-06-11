@@ -16,23 +16,23 @@ export const ResultsPage = ({ params }) => {
   usePageTitle("Resultados de busqueda");
 
   return (
-    <main className="main-results-page container">
+    <>
       {loading ? (
         <Loading />
       ) : (
-        <>
-          <AnimeList
-            animes={animes}
-            title={`${meta?.count} resultados de "${decodeURI(key)}"`}
-          />
+        <main className="main-results-page container">
+          <div className="section-title">
+            <h5>{`${meta?.count} resultados de "${decodeURI(key)}"`}</h5>
+          </div>
+          <AnimeList animes={animes} />
 
           <PaginationList
             count={pageCount}
             offset={pageOffset}
             setPageOffset={setPageOffset}
           />
-        </>
+        </main>
       )}
-    </main>
+    </>
   );
 };

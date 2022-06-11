@@ -20,7 +20,10 @@ export const TopRated = () => {
         <Loading />
       ) : (
         <main className="main-rating container">
-          <AnimeList animes={rating.animes} title="Animes mejor evaluados" />
+          <div className="section-title">
+            <h5>Animes mejor evaluados</h5>
+          </div>
+          <AnimeList animes={rating.animes} />
           <div className="pag-container">
             <PaginationList
               count={pageCount}

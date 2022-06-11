@@ -20,10 +20,10 @@ export const PopularInEmision = () => {
         <Loading />
       ) : (
         <main className="main-in-emision container">
-          <AnimeList
-            animes={inEmision.animes}
-            title="Animes populares en emision"
-          />
+          <div className="section-title">
+            <h5>Animes populares en emision</h5>
+          </div>
+          <AnimeList animes={inEmision.animes} />
           <div className="pag-container">
             <PaginationList
               count={pageCount}

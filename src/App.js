@@ -9,6 +9,8 @@ import { HomePage } from "pages/HomePage/homePage";
 import { ResultsPage } from "pages/ResultsPage/resultPage";
 import { DetailPage } from "pages/DetailPage/detailPage";
 import { CategoryPage } from "pages/CategoryPage/categoryPage";
+import { CategoryRecents } from "pages/CategoryPage/SubPages/categoryEmision";
+import { CategoryMostPopular } from "pages/CategoryPage/SubPages/categoryMostPopular";
 import { PopularInEmision } from "pages/SortPage/popularEmision";
 import { MostPopular } from "pages/SortPage/mostPopular";
 import { TopRated } from "pages/SortPage/topRated";
@@ -30,6 +32,16 @@ export const App = () => {
           <Route exact path="/anime/most-popular" component={MostPopular} />
           <Route exact path="/anime/top-rated" component={TopRated} />
           <Route exact path="/category/:id" component={CategoryPage} />
+          <Route
+            exact
+            path="/category/recents/:id"
+            component={CategoryRecents}
+          />
+          <Route
+            exact
+            path="/category/most-popular/:id"
+            component={CategoryMostPopular}
+          />
           <Route exact path="/search_results/:key" component={ResultsPage} />
         </div>
       </Switch>

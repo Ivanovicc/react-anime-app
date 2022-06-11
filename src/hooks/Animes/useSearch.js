@@ -21,7 +21,7 @@ export const useSearchForm = ({ key }) => {
     getResults({ key, pageOffset }).then((result) => {
       const { meta } = result;
       const newCount = meta.count;
-      const totalCount = Math.ceil(newCount / 18);
+      const totalCount = Math.ceil(newCount / 20);
       setResult(result);
       setPageCount(totalCount);
       setLoadingPage(false);
