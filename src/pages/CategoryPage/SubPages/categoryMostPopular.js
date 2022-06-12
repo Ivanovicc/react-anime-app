@@ -20,7 +20,7 @@ export const CategoryMostPopular = ({ params }) => {
       {loadingPage ? (
         <Loading />
       ) : (
-        <main className="main-popular container">
+        <main className="main-category row container">
           <div className="section-title">
             <h5>{`Animes sobre ${id} más populares`}</h5>
           </div>

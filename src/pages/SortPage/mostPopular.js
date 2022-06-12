@@ -19,18 +19,17 @@ export const MostPopular = () => {
       {loading ? (
         <Loading />
       ) : (
-        <main className="main-popular container">
+        <main className="main-sort row container">
           <div className="section-title">
             <h5>Animes más populares</h5>
           </div>
           <AnimeList animes={popular.animes} />
-          <div className="pag-container">
-            <PaginationList
-              count={pageCount}
-              offset={pageOffset}
-              setPageOffset={setPageOffset}
-            />
-          </div>
+
+          <PaginationList
+            count={pageCount}
+            offset={pageOffset}
+            setPageOffset={setPageOffset}
+          />
         </main>
       )}
     </>
