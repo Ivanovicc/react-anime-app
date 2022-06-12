@@ -19,18 +19,17 @@ export const TopRated = () => {
       {loading ? (
         <Loading />
       ) : (
-        <main className="main-rating container">
+        <main className="main-sort row container">
           <div className="section-title">
             <h5>Animes mejor evaluados</h5>
           </div>
           <AnimeList animes={rating.animes} />
-          <div className="pag-container">
-            <PaginationList
-              count={pageCount}
-              offset={pageOffset}
-              setPageOffset={setPageOffset}
-            />{" "}
-          </div>
+
+          <PaginationList
+            count={pageCount}
+            offset={pageOffset}
+            setPageOffset={setPageOffset}
+          />
         </main>
       )}
     </>

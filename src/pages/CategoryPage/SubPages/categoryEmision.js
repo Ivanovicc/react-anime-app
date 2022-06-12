@@ -20,7 +20,7 @@ export const CategoryRecents = ({ params }) => {
       {loadingPage ? (
         <Loading />
       ) : (
-        <main className="main-recent container">
+        <main className="main-category row container">
           <div className="section-title">
             <h5>{`Animes sobre ${id} recientes`}</h5>
           </div>

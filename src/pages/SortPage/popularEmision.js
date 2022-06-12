@@ -19,18 +19,17 @@ export const PopularInEmision = () => {
       {loading ? (
         <Loading />
       ) : (
-        <main className="main-in-emision container">
+        <main className="main-sort row container">
           <div className="section-title">
             <h5>Animes populares en emision</h5>
           </div>
           <AnimeList animes={inEmision.animes} />
-          <div className="pag-container">
-            <PaginationList
-              count={pageCount}
-              offset={pageOffset}
-              setPageOffset={setPageOffset}
-            />
-          </div>
+
+          <PaginationList
+            count={pageCount}
+            offset={pageOffset}
+            setPageOffset={setPageOffset}
+          />
         </main>
       )}
     </>
