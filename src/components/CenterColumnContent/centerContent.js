@@ -36,7 +36,7 @@ export const CenterColumnContent = ({
         </span>
       </div>
       <div className="description-anime">
-        <ReadMore text={description} limit={480} index={479} />
+        <ReadMore text={description} limit={480} />
       </div>
       <div className="ranking-wrap">
         <span className="popular-rank ranking">
