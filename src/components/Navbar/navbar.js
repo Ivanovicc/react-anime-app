@@ -8,9 +8,7 @@ export const NavBar = () => {
     <nav className="nav-section">
       <div className="nav container">
         <div className="nav-title">
-          <Link to="/">
-            <a>Sakura サクラ</a>
-          </Link>
+          <Link to="/">Sakura サクラ</Link>
         </div>
         <div className="navbar-box">
           <SearchBar />

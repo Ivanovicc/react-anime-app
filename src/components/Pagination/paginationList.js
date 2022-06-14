@@ -8,7 +8,7 @@ import {
 import "./paginationList.css";
 
 export const PaginationList = ({ setPageOffset, count, offset }) => {
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
 
   const handleNext = (event) => {
     startTransition(() => {
@@ -18,7 +18,7 @@ export const PaginationList = ({ setPageOffset, count, offset }) => {
   };
 
   return (
-    <div className="paginate-wrap">
+    <div className="paginate-wrap row">
       <ReactPaginate
         previousLabel={<ArrowBackIosRounded />}
         nextLabel={<ArrowForwardIosRounded />}

@@ -1,6 +1,6 @@
-import { formatDate } from "hooks/formatDate";
-import { formatHour } from "hooks/formatDuration";
-import { toCapitalize } from "hooks/toCapitalize";
+import { formatDate } from "utils/formatDate";
+import { formatHour } from "utils/formatDuration";
+import { toCapitalize } from "utils/toCapitalize";
 
 export const SideColumnContent = ({
   sideTitle,
@@ -20,7 +20,6 @@ export const SideColumnContent = ({
     let display = content ? "flex" : "none";
     return display;
   };
-
 
   return (
     <div className="main-col right-side">
