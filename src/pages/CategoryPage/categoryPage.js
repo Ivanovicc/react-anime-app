@@ -31,7 +31,7 @@ export const CategoryPage = ({ params }) => {
             <div className="media-category">
               <div className="media-body">
                 <h3>Animes sobre {id}</h3>
-                <ReadMore limit={300} text={parentId.info} />
+                <ReadMore limit={350} text={parentId.info} />
               </div>
             </div>
             <ListPreview

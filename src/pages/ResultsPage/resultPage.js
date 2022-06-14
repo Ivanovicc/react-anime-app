@@ -5,6 +5,8 @@ import { Loading } from "components/Loading/loadingPage";
 /* Hooks */
 import { useSearchForm } from "hooks/Animes/useSearch";
 import { usePageTitle } from "hooks/usePageTitle";
+/* Styles */
+import "./resultPage.css";
 
 export const ResultsPage = ({ params }) => {
   const { key } = params;
@@ -20,7 +22,7 @@ export const ResultsPage = ({ params }) => {
       {loading ? (
         <Loading />
       ) : (
-        <main className="main-results-page container">
+        <main className="main-results-page row container">
           <div className="section-title">
             <h5>{`${meta?.count} resultados de "${decodeURI(key)}"`}</h5>
           </div>

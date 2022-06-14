@@ -28,33 +28,39 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 200ms ease;
-  padding: 0 6px;
 }
 
 .page-item .page-link svg {
   font-size: 1rem;
 }
 
-.page-item .page-link:hover {
-  background: var(--btn-primary);
-}
-
 .page-item.active .page-link {
   background: var(--btn-primary);
   position: relative;
+  transition: color 0.4s ease-out;
+}
+
+.page-item .page-link:hover {
+  background: #5526c4f2;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .paginate-wrap {
-    padding: 0;
+  .paginate-wrap .row {
+    margin-left: -20px;
+  }
+
+  .page-item .page-link {
+    font-size: 0.75rem;
+  }
+
+  .page-item .page-link svg {
+    font-size: 0.75rem;
   }
 
   .page-item .page-link {
     width: 24px;
     min-width: 24px;
-    height: 24px;
-    margin: 0 4px;
-    padding: 0 4px;
+    height: 28px;
+    margin: 0 2px;
   }
 }
