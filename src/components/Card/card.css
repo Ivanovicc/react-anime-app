@@ -1,3 +1,10 @@
+@media (min-width: 1421px) {
+  .list-section .list-grid .anime-card,
+  .preview-section .preview-grid .anime-card {
+    width: 20%;
+  }
+}
+
 @media (max-width: 1420px) {
   .list-section .list-grid .anime-card,
   .preview-section .preview-grid .anime-card {
@@ -9,6 +16,10 @@
   .list-section .list-grid .anime-card,
   .preview-section .preview-grid .anime-card {
     width: 25%;
+  }
+
+  .main-home .preview-grid .anime-card:nth-child(5) {
+    display: none;
   }
 }
 
