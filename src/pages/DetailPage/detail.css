@@ -246,6 +246,11 @@
 /* Mobile */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+  .cover-wrapper {
+    display: none;
+  }
+
   /* SIDEBAR */
   .sidebar-section {
     position: unset;
@@ -266,6 +271,10 @@
     margin-right: -15px;
   }
 
+  .description-anime {
+    margin-bottom: 0;
+  }
+
   .ranking-wrap {
     width: 100%;
     display: block;
@@ -275,6 +284,7 @@
   /* RIGHT SIDE */
   .right-side {
     max-width: 100%;
+    margin-top: 20px;
   }
 
   .info-container {
